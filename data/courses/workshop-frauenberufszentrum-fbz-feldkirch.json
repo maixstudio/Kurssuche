@@ -1,0 +1,90 @@
+{
+  "titel": "Workshop Frauenberufszentrum (FBZ) Feldkirch",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Feldkirch"
+  ],
+  "themen_tags": [
+    "Berufsorientierung",
+    "Frauen",
+    "Wiedereinstieg",
+    "Wirtschaftskompetenz"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen"
+  ],
+  "sprachniveau": "A2",
+  "altersgrenze": {
+    "von": 18,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Feldkirch vorgemerkte Frauen (auch Wiedereinsteigerinnen und unabhängig vom Ausbildungsniveau) ab 18 Jahren, mit Deutschkenntnissen von mindestens A2, die bereits im Rahmen der Beratungs- und Betreuungseinrichtung des Frauenberufszentrum Vorarlberg (FBZ) beraten und betreut wurden. Ein Quereinstieg für vorgemerkte Frauen ohne ein aktuelles Clearing oder eine aktuelle Potenzialanalyse (nicht älter als 6 Monate) ist nicht möglich.",
+  "ziel": "Berufliche Perspektiven zu entwickeln, die Integration in den Arbeitsmarkt zu fördern und die Höherqualifizierung zu unterstützen.",
+  "inhalt": {
+    "Einstieg": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Unterstützung zum Thema Kinderbetreuung",
+      "Anamnese und Standortbestimmung",
+      "Klärung der weiteren Teilnahme",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsam einen Förderantrag ausfüllen"
+    ],
+    "Workshops": [
+      "Kompetenzenbilanzierung und Lerntypen",
+      "Berufsorientierung",
+      "Bewerbungstraining",
+      "Kommunikation",
+      "Work Life Balance",
+      "Gesundheitsmanagement",
+      "Medienkompetenz",
+      "Exkursionen und Veranstaltungen"
+    ],
+    "EBC*L Jobready": [
+      "Wirtschaftsführerschein",
+      "Persönliche- und soziale Kompetenzen",
+      "Berufsorientierung und Bewerbungsmanagement"
+    ],
+    "EBC*L Betriebswirtschaft": [
+      "Bilanzen und Kennzahlen",
+      "Kosten- und Investitionsrechnung",
+      "Wirtschaftsrecht und Finanzwissen"
+    ]
+  },
+  "form_und_dauer": "Teilnahme an EBC*L Jobready oder EBC*L Betriebswirtschaft sowie Erhalt eines Zertifikates, wenn die Voraussetzungen dafür erfüllt sind. Praktikum: 1 Woche. Teilnahmedauer: 7 Wochen + 1 Woche Praktikum. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 828859 V 1",
+      "start": "15.09.2025"
+    },
+    {
+      "kursnummer": "M 828859 V 2",
+      "start": "09.02.2026"
+    },
+    {
+      "kursnummer": "M 828859 V 3",
+      "start": "04.05.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Albert-Schädler-Straße 12, 6800 Feldkirch"
+  ],
+  "kontakt": [
+    {
+      "name": "Tatjana Winder",
+      "telefon": "+43 676 3983816",
+      "email": "info@frauen-berufszentrum.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "FBZ Workshop Feldkirch_2025.pdf",
+    "ausstellungsdatum": "05.11.2025"
+  },
+  "teilregion": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "workshop-frauenberufszentrum-fbz-feldkirch"
+}

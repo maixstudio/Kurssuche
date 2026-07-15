@@ -1,0 +1,70 @@
+{
+  "titel": "KIT - Kompetenzzentrum IT",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Bludenz"
+  ],
+  "themen_tags": [
+    "IT",
+    "Digitalisierung",
+    "Qualifizierung"
+  ],
+  "zielgruppe_tags": [
+    "arbeitssuchend"
+  ],
+  "zielgruppe": "Arbeitssuchende Personen in Tirol und Vorarlberg mit niederschwelligem Angebot zur Entwicklung digitaler und IT-bezogener Kompetenzen. Zielgruppe ohne digitale Vorerfahrung bzw. technisch versierte Personen mit Interesse an IT-Berufen. Voraussetzungen: Je nach Zielgruppe keine Vorkenntnisse, digitale Grundkenntnisse oder fortgeschrittene technische Kenntnisse.",
+  "ziel": "Arbeitsmarktintegration durch arbeitsmarktrelevante IT-Qualifizierung, Aufbau digitaler Handlungskompetenz auf allen Niveaustufen, individuelle, durchlässige Lernpfade statt Einheitsqualifizierung, Chancengleichheit, Stabilisierung und langfristige Beschäftigungsfähigkeit.",
+  "inhalt": {
+    "Einführungs- und Orientierungswoche - Digital Discovery Week": [
+      "Begrüßung & Einführung, Digital Self-Assessment, Erstellung des Bildungsplans, Orientierung zu Levels, Online-Workshop"
+    ],
+    "Level 1 - Basic: Digital Fluency": [
+      "Grundlegende digitale Fertigkeiten für Alltag und Beruf, digitale Technologien sicher anwenden und erste IT-Grundlagen"
+    ],
+    "Level 2 - Advanced: Digital Work": [
+      "Anwendung digitaler Tools im Arbeitskontext und zur Mitgestaltung digitaler Projekte, Erreichen des „Digital-Worker\"-Niveaus"
+    ],
+    "Level 3 - Expert: SysAdmin / Coding": [
+      "Qualifizierung für komplexe IT-Aufgaben wie Programmierung, Systemadministration und Projektarbeit, Erwerben der Basis für weiterführende IT-Ausbildungen und eine nachhaltige Arbeitsmarktintegration"
+    ],
+    "Levelübergreifend": [
+      "Identität & Diversität, New Work & Agile Mindset, Kreative KI & Digital Ethics, Career & Networking, Gesundheit & Digital Wellbeing, Female Empowerment in Tech, Generationen-Brücke (Gen Z & Boomer)",
+      "Kurzinformation Arbeitsrecht",
+      "Praktika",
+      "Begleitendes Einzelcoaching, Bewerbungsmanagement und Vermittlungsunterstützung"
+    ]
+  },
+  "form_und_dauer": "Projektzeitraum: 13.04.2026 - 31.12.2026. Verweildauer: Je nach individuellem Ausbildungsplan (Basics, Advanced, Experts), maximal 1 Jahr inkl. Praxiszeiten. 25 Maßnahmenstunden pro Woche: 4 Tage Präsenz / 1 Tag online (Einführungs- und Orientierungswoche), 6 Stunden Präsenzworkshops/Woche/Standort, 12 Stunden Online-Live-Unterricht/Woche, 7 Stunden Selbstlernmodule/Woche.",
+  "termine": [
+    {
+      "kursnummer": null,
+      "start": "13.04.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Bahnhofplatz 1c, 6700 Bludenz"
+  ],
+  "kontakt": [
+    {
+      "name": "Mag. Kurt Hofer",
+      "telefon": "+43 664 85 63 669",
+      "email": "kurt.hofer@ibisacam.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "ibis acam Bildungs GmbH",
+    "adresse": "Bahnhofplatz 1c, 6700 Bludenz"
+  },
+  "quelle": {
+    "dateiname": "KIT - Kompetenzzentrum IT.pdf",
+    "ausstellungsdatum": ""
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "kit-kompetenzzentrum-it"
+}

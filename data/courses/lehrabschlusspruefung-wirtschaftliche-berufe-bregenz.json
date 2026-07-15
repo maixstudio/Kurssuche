@@ -1,0 +1,94 @@
+{
+  "titel": "Lehrabschlussprüfung wirtschaftliche Berufe Bregenz",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Bregenz"
+  ],
+  "themen_tags": [
+    "Lehrabschluss",
+    "Wirtschaft/Büro",
+    "Handel",
+    "Frauen"
+  ],
+  "zielgruppe_tags": [
+    "Frauen"
+  ],
+  "altersgrenze": {
+    "von": 18,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Bregenz vorgemerkte Frauen aus den Bereichen Einzelhandel, Großhandel und Büro, die über eine berufsrelevante und nachweisbare Praxis von mindestens 1,5 Jahren bzw. eine Lehrabschlussprüfung in einem verwandten Lehrberuf verfügen und zum Zeitpunkt der geplanten Lehrabschlussprüfung mindestens 18 Jahre alt sind.",
+  "ziel": "Die Lehrabschlussprüfung im jeweiligen Beruf zu absolvieren, die Berufschancen zu erhöhen und den Wiedereinstieg in den Arbeitsmarkt zu fördern.",
+  "inhalt": {
+    "Infoveranstaltung 1": [
+      "Ein erstes kennenlernen findet statt",
+      "Alles wichtige über den Kurs erfahren",
+      "Klärung von offenen Fragen",
+      "Kurszeiten und Planung der Kinderbetreuung",
+      "Motivation für die weitere Teilnahme schaffen",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Überprüfung der Zugangsvoraussetzungen",
+      "Informationen zu den benötigten Unterlagen"
+    ],
+    "Infoveranstaltung 2": [
+      "Überprüfung von benötigten Unterlagen",
+      "Anmeldung zur Lehrabschlussprüfung",
+      "Gemeinsames Ausfüllen eines Förderantrages",
+      "Bei Bedarf Erstellen einer E-Mail Adresse"
+    ],
+    "Qualifizierung zur Lehrabschlussprüfung": [
+      "Betriebswirtschaftliches Basistraining",
+      "Prüfungsrelevante Inhalte je nach Lehrberuf",
+      "Lernkompetenz und Lernmethoden",
+      "Motivationstraining und Persönlichkeitstraining",
+      "Angst- und Stressbewältigung",
+      "Gelerntes wiederholen und Prüfungsvorbereitung"
+    ],
+    "Bewerbungstraining": [
+      "Kommunikationstraining",
+      "Ressourcen- und Biographiearbeit",
+      "Die eigenen Fähigkeiten erkennen",
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Eine eigene Bewerbungsstrategie entwickeln",
+      "Aktive Praktikums- und Arbeitssuche"
+    ],
+    "Weitere Bausteine": [
+      "Arbeitserprobung, Praktikum, Praktikumsreflexion"
+    ]
+  },
+  "form_und_dauer": "Einzelcoaching: Individuelle Beratung je nach Bedarf der Teilnehmerinnen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Teilnahmedauer: 14 Wochen mit anschließend weiteren 6 Wochen für die Nachbetreuung. Vor Kursbeginn findet eine zweiteilige Infoveranstaltung statt. Eine Teilnahme ist nach Vereinbarung ab den folgenden Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 826126 V 1",
+      "start": "21.07.2025",
+      "anmerkung": "Info 1: 07.07.2025, Info 2: 14.07.2025"
+    },
+    {
+      "kursnummer": "M 826126 V 2",
+      "start": "09.03.2026",
+      "anmerkung": "Info 1: 23.02.2026, Info 2: 02.03.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Wolfeggstraße 11, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": null,
+      "telefon": "+43 676 3862290",
+      "email": "office@donna.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "LAP wirtschaftliche Berufe Bregenz_2025.pdf",
+    "ausstellungsdatum": "06.03.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "lehrabschlusspruefung-wirtschaftliche-berufe-bregenz"
+}

@@ -1,0 +1,83 @@
+{
+  "titel": "Campus - Metalltechnik",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Metalltechnik",
+    "CNC",
+    "Handwerk/Technik",
+    "Arbeitssuche"
+  ],
+  "zielgruppe_tags": [
+    "arbeitssuchend",
+    "lehrstellensuchend"
+  ],
+  "sprachniveau": "A2",
+  "altersgrenze": {
+    "von": 19,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg arbeitssuchend oder lehrstellensuchend vorgemerkte Personen ab 19 Jahren, mit dem Ziel ein Arbeits- oder Ausbildungsverhältnis in der Metallindustrie zu beginnen. Personen unter 19 Jahren können nur aufgenommen werden, wenn sie die Lehrzeit ohne LAP abgeschlossen haben und zum Zwecke einer Vorbereitung zum Nachholen einer LAP den Campus Metalltechnik nutzen wollen. Deutschkenntnisse von mindestens A2 sind notwendig.",
+  "ziel": "Die Teilnehmer_innen praxisnah und fachspezifisch für eine Ausbildung oder eine Arbeitsaufnahme in der Metallindustrie vorzubereiten.",
+  "inhalt": {
+    "Informationsmodul": [
+      "Alles wichtige über den Kurs erfahren",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Einstufung und Klärung der weiteren Teilnahme"
+    ],
+    "Metalltechnik und CNC Drehen und Fräsen": [
+      "Erwerb von Grundlagen und Grundkenntnissen",
+      "Material-, Werkzeug- und Werkstoffkunde",
+      "Maschinen kennenlernen und bedienen können",
+      "Technische Unterlagen verstehen und anwenden",
+      "Erstellen von verschiedenen Werkstücken",
+      "Selbstständiges umsetzen von Arbeitsaufträgen"
+    ],
+    "Aktive Arbeitssuche": [
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Unterstützung auf Bewerbungsplattformen",
+      "Entwicklung einer eigenen Bewerbungsstrategie",
+      "Vorbereitung auf Bewerbungsgespräche",
+      "Digitale AMS Angebote kennenlernen"
+    ],
+    "Praxismodul": [
+      "Praktika, Arbeitstraining, Arbeitserprobung",
+      "Neue Erfahrungen sammeln",
+      "Bereits erlerntes in die Praxis umsetzen",
+      "Mögliche Arbeitgeber kennenlernen"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Module: Informationsmodul, Metalltechnik, CNC Drehen und Fräsen, Aktive Arbeitssuche, Praxismodul. Teilnahmedauer: Maximal 24 Wochen. Eine Teilnahme ist nach Vereinbarung ab dem folgenden Starttermin möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 839044 V 1",
+      "start": "01.04.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Reichsstraße 150, 6800 Feldkirch"
+  ],
+  "kontakt": [
+    {
+      "name": "Jacqueline Osirnigg",
+      "telefon": "+43 664 88347094",
+      "email": "jacqueline.osirnigg@integra.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "Integra Vorarlberg gGmbH",
+    "adresse": "Konrad-Doppelmayr-Straße 13, 6922 Wolfurt"
+  },
+  "quelle": {
+    "dateiname": "Campus Metalltechnik_2026.pdf",
+    "ausstellungsdatum": "28.01.2026"
+  },
+  "teilregion": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "campus-metalltechnik"
+}

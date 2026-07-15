@@ -1,0 +1,98 @@
+{
+  "titel": "Kompetenzzentrum Spracherwerb Oberland",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Bludenz",
+    "Feldkirch"
+  ],
+  "teilregion": "Oberland",
+  "themen_tags": [
+    "Deutsch/Sprache",
+    "Sprachförderung",
+    "Arbeitssuche"
+  ],
+  "zielgruppe_tags": [
+    "Sprachdefizite"
+  ],
+  "sprachniveau": "A1/A2/B1",
+  "zielgruppe": "Beim Arbeitsmarktservice Bludenz oder Feldkirch vorgemerkte Personen mit Sprachdefiziten, ausgenommen sind anerkannte Flüchtlinge (KON/SUB).",
+  "ziel": "Die Teilnehmer_innen in der deutschen Sprache für die Sprachlevel A1, A2 oder B1 zu qualifizieren und sprachlich auf eine erfolgreiche Arbeitssuche oder eine Weiterbildung vorzubereiten.",
+  "inhalt": {
+    "Infomodul": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Erhebung der aktuellen Sprachkenntnisse",
+      "Informationen zum Thema Kinderbetreuung",
+      "MeinAMS kennenlernen und ausprobieren"
+    ],
+    "Vermittlung der deutschen Sprache": [
+      "A1, A2 oder B1"
+    ],
+    "Werte- und Orientierungswissen": [
+      "Sprache, Bildung und Arbeitsmarkt",
+      "Regeln und Vielfalt des Zusammenlebens",
+      "Verfassungswerte und rechtliche Integration"
+    ],
+    "Deutsch für die Arbeitssuche": [
+      "Digitale AMS Angebote kennenlernen",
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Die eigene berufliche Zukunft planen",
+      "Informationen über den Arbeitsmarkt"
+    ],
+    "Vorbereitung auf die ÖIF Prüfung": [
+      "Bereits gelerntes wiederholen und vertiefen",
+      "Kennenlernen der ÖIF Testformate",
+      "Bearbeitung von Modeltests"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Vormittag oder Nachmittag: Die Einteilung erfolgt während dem Infomodul. Teilnahmedauer: 10 Wochen. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 828278 V 1",
+      "start": "21.07.2025"
+    },
+    {
+      "kursnummer": "M 828278 V 1",
+      "start": "29.09.2025"
+    },
+    {
+      "kursnummer": "M 828278 V 1",
+      "start": "09.12.2025"
+    },
+    {
+      "kursnummer": "M 828278 V 1",
+      "start": "02.03.2026"
+    },
+    {
+      "kursnummer": "M 828278 V 1",
+      "start": "11.05.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Schießstätte 12c, 6800 Feldkirch (Kursstart)",
+    "Beim Gräble 2, 6800 Feldkirch"
+  ],
+  "kontakt": [
+    {
+      "name": "Jutta Huber",
+      "telefon": "+43 664 8893 0299",
+      "email": "jutta.huber@ibisacam.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "ibis acam Bildungs GmbH",
+    "adresse": "Bachgasse 1a, 6900 Bregenz"
+  },
+  "quelle": {
+    "dateiname": "Kompetenzzentrum Spracherwerb Oberland_2025.pdf",
+    "ausstellungsdatum": "05.11.2025"
+  },
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "kompetenzzentrum-spracherwerb-oberland"
+}

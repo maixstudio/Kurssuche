@@ -1,0 +1,78 @@
+{
+  "titel": "FIT und FIT Lehre Implacement Stiftung Vorarlberg",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Handwerk/Technik",
+    "Frauen",
+    "Lehrausbildung",
+    "Stiftung"
+  ],
+  "zielgruppe_tags": [
+    "Frauen"
+  ],
+  "altersgrenze": {
+    "von": 18,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Frauen ab 18 Jahren, die eine Aus- und Weiterbildung in einem technisch-handwerklichen Beruf anstreben und anschließend im Unternehmen ein vollversicherungspflichtiges Dienstverhältnis aufnehmen wollen. Unternehmen mit Sitz in Vorarlberg, die bereit sind Frauen in technisch-handwerklichen Berufen auszubilden. Nicht förderbar sind: tertiäre Ausbildungen, öffentliche Institutionen, politische Parteien, Körperschaften des öffentlichen Rechts, radikale Vereine und Unternehmen die sich in Insolvenz befinden.",
+  "ziel": "Den Teilnehmerinnen eine technisch-handwerkliche Ausbildung zu ermöglichen und sie in den Arbeitsmarkt zu integrieren. Unternehmen soll der Zugang zu passendem Personal erleichtert werden.",
+  "inhalt": {
+    "Voraussetzungen": [
+      "Interesse an einer Aus- und Weiterbildung in technisch-handwerklichen Berufen",
+      "Keine Beschäftigung im Ausbildungsunternehmen während der letzten 12 Monate",
+      "Keine eigene Kündigung durch die Teilnehmerin zum Zwecke der Stiftungsteilnahme"
+    ],
+    "Teilnehmerinnen": [
+      "Erhalten entweder Arbeitslosengeld, Notstandshilfe oder eine Beihilfe zur Deckung des Lebensunterhaltes (DLU) und sind über das Arbeitsmarktservice versichert.",
+      "Monatliches Stipendium: € 100,- bei einer Dauer kürzer als 6 Monate, € 400,- bei einer Dauer länger als 6 Monate."
+    ],
+    "Kosten für das Unternehmen": [
+      "€ 442,- pro Monat für FiT",
+      "€ 642,- pro Monat für FiT Lehre",
+      "Ausbildungskosten die € 7.000,- übersteigen werden vom Land Vorarlberg und AMS übernommen."
+    ]
+  },
+  "form_und_dauer": "Zeitraum: 01.01.2026 bis 31.12.2030. Eintritte sind bis zum 31.12.2026 möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 838455 V 1",
+      "anmerkung": "Implacement FiT"
+    },
+    {
+      "kursnummer": "M 838454 V 1",
+      "anmerkung": "Implacement FiT Lehre"
+    }
+  ],
+  "kontakt": [
+    {
+      "name": "Bettina Marjanovic",
+      "telefon": "+43 5572 53209 3636",
+      "email": "bettina.marjanovic@fab.at"
+    },
+    {
+      "name": "Lukas Pichler",
+      "telefon": "+43 664 8565981",
+      "email": "lukas.pichler@fab.at"
+    },
+    {
+      "name": null,
+      "email": "implacement.vorarlberg@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "FIT und FIT Lehre Implacementstiftung Vorarlberg_2026.pdf",
+    "ausstellungsdatum": "16.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "veranstaltungsort": [],
+  "id": "fit-und-fit-lehre-implacement-stiftung-vorarlberg"
+}

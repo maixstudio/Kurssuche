@@ -1,0 +1,83 @@
+{
+  "titel": "Digital # Future # Lab",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Digitalisierung",
+    "IT",
+    "Berufsorientierung",
+    "Frauen"
+  ],
+  "zielgruppe_tags": [
+    "Frauen"
+  ],
+  "sprachniveau": "B2",
+  "altersgrenze": {
+    "von": 15,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Frauen zwischen 15 und 24 Jahren, mit Pflichtschulabschluss und Deutschkenntnissen von mindestens B2, die ihre digitalen Kompetenzen verbessern wollen, sich für eine (Höher-)Qualifizierung interessieren und bereit sind sich auf die Arbeitswelt 4.0 einzulassen.",
+  "ziel": "Die Berufschancen der Teilnehmerinnen durch Stärkung Ihrer digitalen Kompetenzen zu erhöhen und eine erfolgreiche Eingliederung in den Ausbildungs- oder Arbeitsmarkt zu ermöglichen.",
+  "inhalt": {
+    "Einstieg": [
+      "Alles wichtige über den Kurs erfahren",
+      "Unterstützung zum Thema Kinderbetreuung",
+      "Anamnese und Standortbestimmung",
+      "Klärung der weiteren Teilnahme",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsam einen Förderantrag ausfüllen"
+    ],
+    "Themenschwerpunkte": [
+      "Soziale Medien - Wissen für den Unternehmensbereich",
+      "Web und Design - Grundlagen des Webdesigns",
+      "Basic Coding - Grundlagen von Coding und Programmieren",
+      "Media Literacy - Medien verstehen, analysieren, erstellen und reflektieren",
+      "Digital Making - Umsetzung von kreativen Ideen und kleinen Projekten",
+      "Kompetenzenbilanzierung und Bewerbungstraining",
+      "Kreative und interdisziplinäre Kompetenzen",
+      "Selbstmanagement und Netzwerkkompetenz"
+    ],
+    "Workshops (Verein Amazone)": [
+      "Selbstbewusst",
+      "Werkstatt",
+      "Sicherheit durch Medienkompetenz"
+    ],
+    "Weitere Bausteine": [
+      "Exkursionen"
+    ]
+  },
+  "form_und_dauer": "Praktikum: 2 Wochen. Teilnahmedauer: 12 Wochen (inklusive Praktikum). Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 828858 V 1",
+      "start": "20.10.2025"
+    },
+    {
+      "kursnummer": "M 828858 V 2",
+      "start": "07.04.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Am Kehlerpark 3, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "Tatjana Winder",
+      "telefon": "+43 676 3983816",
+      "email": "info@frauen-berufszentrum.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Digital Future Lab_2025.pdf",
+    "ausstellungsdatum": "05.11.2025"
+  },
+  "teilregion": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "digital-future-lab"
+}

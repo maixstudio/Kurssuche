@@ -1,0 +1,135 @@
+{
+  "titel": "Restart – Leben und Arbeiten in Vorarlberg",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Migration/Flucht",
+    "Deutsch/Sprache",
+    "Grundkompetenzen"
+  ],
+  "zielgruppe_tags": [
+    "bildungsferne Flüchtlinge"
+  ],
+  "sprachniveau": "A1",
+  "zielgruppe": "Bildungsferne Flüchtlinge ohne Arbeitsmarktintegration, die über Sprachkenntnisse ab Level A1 verfügen.",
+  "ziel": "Die Teilnehmer_innen an das Leben und Arbeiten in Vorarlberg heranzuführen, eine Verbesserung der Grundkompetenzen zu fördern und eine dauerhafte Integration in den Arbeitsmarkt zu ermöglichen.",
+  "inhalt": {
+    "Erstgespräch": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Klärung der aktuellen Situation",
+      "Gemachte Lern- und Berufserfahrungen reflektieren",
+      "Überprüfung von Deutschkenntnissen, schulischem Basiswissen und digitalen Fähigkeiten"
+    ],
+    "Gruppen- und Kleingruppeninhalte": [
+      "Basiskompetenzen für Alltag und Beruf",
+      "Kennenlernen regionaler Strukturen",
+      "Berufsorientierung und Bewerbungstraining",
+      "Erweiterung der deutschen Sprachkompetenz",
+      "Erwerb mathematischer und digitaler Grundkompetenzen",
+      "Kommunikation und Umgang mit Konflikten",
+      "Bearbeitung gendersensibler Themenstellungen"
+    ],
+    "Begleitete Arbeitserprobung": [
+      "Erste Erfahrungen am Arbeitsmarkt sammeln",
+      "Berufe und Unternehmen kennenlernen",
+      "Kontakte knüpfen für eine mögliche Arbeitsaufnahme"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Teilnahmedauer: 12 Wochen. Arbeitserprobung: Bis zu 2 Wochen. Nachbetreuung: Bei Bedarf nach Kursende. Eine Teilnahme ist nach Absprache ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 811506 V 15",
+      "start": "12.01.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 16",
+      "start": "16.02.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 17",
+      "start": "30.03.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 18",
+      "start": "11.05.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 19",
+      "start": "22.06.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 20",
+      "start": "03.08.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 21",
+      "start": "14.09.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 22",
+      "start": "27.10.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 23",
+      "start": "07.12.2026"
+    },
+    {
+      "kursnummer": "M 811506 V 24",
+      "start": "25.01.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 25",
+      "start": "08.03.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 26",
+      "start": "19.04.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 27",
+      "start": "31.05.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 28",
+      "start": "12.07.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 29",
+      "start": "23.08.2027"
+    },
+    {
+      "kursnummer": "M 811506 V 30",
+      "start": "04.10.2027"
+    }
+  ],
+  "veranstaltungsort": [
+    "Bildgasse 18, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "Anahita Pandazmapoo",
+      "telefon": "+43 664 82781 21",
+      "email": "anahita.pandazmapoo@ibisacam.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "ibis acam Bildungs GmbH",
+    "adresse": "Bachgasse 1a, 6900 Bregenz"
+  },
+  "quelle": {
+    "dateiname": "Restart-leben und arbeiten in Vorarlberg_2026-2027.pdf",
+    "ausstellungsdatum": "31.10.2025"
+  },
+  "teilregion": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "restart-leben-und-arbeiten-in-vorarlberg"
+}

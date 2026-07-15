@@ -1,0 +1,84 @@
+{
+  "titel": "FIT Perspektivenerweiterung Unterland",
+  "massnahmentyp": "Orientierung und Qualifizierung",
+  "regionen": [
+    "Bregenz",
+    "Dornbirn"
+  ],
+  "teilregion": "Unterland",
+  "themen_tags": [
+    "Handwerk/Technik",
+    "Berufsorientierung",
+    "Frauen"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Mädchen"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg (vorrangig Bregenz und Dornbirn) vorgemerkte Frauen und Mädchen mit Interesse an einer technischen Ausbildung. Frauen mit Fachhochschul- oder Universitätsabschluss dürfen bei Nichtverwertbarkeit ihres Studiums und nach Genehmigung durch die zuständige RGS Leitung ebenfalls am Programm teilnehmen.",
+  "ziel": "Die Teilnehmerinnen zu orientieren und in nicht traditionellen Ausbildungen mit mindestens Lehrabschluss zu qualifizieren.",
+  "inhalt": [
+    "MeinAMS kennenlernen und ausprobieren",
+    "Gemeinsames Ausfüllen eines Förderantrages",
+    "Die eigenen Stärken und Fähigkeiten erkennen",
+    "Soziale Fähigkeiten fördern und stärken",
+    "Orientierung in nicht traditionellen Berufen",
+    "Einkommensmöglichkeiten und Gehaltsschere",
+    "Erfahrungsaustausch mit Frauen aus der Praxis",
+    "Geschlechterrollen und Lebensentwürfe",
+    "Begleitender Genderworkshop",
+    "Basisqualifizierung im Bereich EDV",
+    "Workshops und Arbeiten in Werkstätten",
+    "Individuelle Bewerbungsunterstützung",
+    "Exkursionen und Praktika",
+    "Vorbereitung auf die handwerklich technische Vorqualifizierung"
+  ],
+  "form_und_dauer": "Teilnahmedauer: 5 Wochen. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 839182 V 1",
+      "start": "07.04.2026"
+    },
+    {
+      "kursnummer": "M 839182 V 2",
+      "start": "08.06.2026"
+    },
+    {
+      "kursnummer": "M 839182 V 3",
+      "start": "19.10.2026"
+    },
+    {
+      "kursnummer": "M 839182 V 4",
+      "start": "16.11.2026"
+    },
+    {
+      "kursnummer": "M 839182 V 5",
+      "start": "11.01.2027"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn / Rheinstraße 32, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "FIT Perspektivenerweiterung Unterland_2026.pdf",
+    "ausstellungsdatum": "29.01.2026"
+  },
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "fit-perspektivenerweiterung-unterland"
+}

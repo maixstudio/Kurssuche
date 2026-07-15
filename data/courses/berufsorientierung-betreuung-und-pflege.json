@@ -1,0 +1,75 @@
+{
+  "titel": "Berufsorientierung Betreuung und Pflege",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Pflege",
+    "Betreuung",
+    "Gesundheits- und Sozialberufe",
+    "Berufsorientierung"
+  ],
+  "zielgruppe_tags": [
+    "Pflichtschulabschluss"
+  ],
+  "sprachniveau": "B1",
+  "altersgrenze": {
+    "von": 17,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Personen ab 17 Jahren mit Pflichtschulabschluss und einem Sprachniveau von mindestens B1, die sich im Gesundheits- oder Sozialbereich orientieren möchten und eine Ausbildung in einem Gesundheits- oder Sozialberuf anstreben. Ausgenommen sind Personen, die bereits einen entsprechenden Ausbildungsplatz haben.",
+  "ziel": "Orientierung und Vorbereitung für Menschen, die sich für eine Ausbildung in einem Gesundheits- oder Sozialberuf interessieren und sich für einen Ausbildungsplatz in einer entsprechenden Ausbildungseinrichtung bewerben wollen.",
+  "inhalt": {
+    "Einzelcoaching": [
+      "Individuelle Abklärung beruflicher Perspektiven im Gesundheits- oder Sozialbereich",
+      "Informationen über mögliche Praktikumsstellen",
+      "Unterstützung bei der Suche nach einer passenden Praktikumsstelle",
+      "Konkretisierung des Ausbildungswunsches",
+      "Bewerbungsunterstützung für einen Ausbildungsplatz",
+      "Überbrückungsmöglichkeiten bis Ausbildungsbeginn"
+    ],
+    "Praktikum": [
+      "Überprüfung und Festigung des Berufswunsches",
+      "Erwerb von wichtigen Praxiserfahrungen",
+      "Kennenlernen der zukünftigen Arbeitsfelder",
+      "Kontakte zu möglichen Dienstgebern knüpfen",
+      "Eigenreflexion und Selbstwahrnehmung"
+    ],
+    "Berufsorientierung Betreuung und Pflege - Theorie": [
+      "Ausbildungsmöglichkeiten im Gesundheits- oder Sozialbereich",
+      "Betreuungs- und Pflegenetz in Vorarlberg",
+      "Fördermöglichkeiten über die connexia Implacementstiftung",
+      "Vorbereitung für die Bewerbung und das Aufnahmeverfahren in den entsprechenden Ausbildungseinrichtungen",
+      "Praxisreflexion"
+    ]
+  },
+  "form_und_dauer": "Einzelcoaching: 2 Einheiten pro Teilnehmer_in. Praktikum: mindestens 5 Tage, maximal 8 Wochen. Theorie: 5 Unterrichtseinheiten. Eine individuelle Teilnahme ist nach Absprache ab dem 01.09.2025 möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 833219 V 1",
+      "start": "01.09.2025"
+    }
+  ],
+  "veranstaltungsort": [
+    "Quellenstraße 16, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": "Reingard Feßler",
+      "telefon": "+43 5574 48787 0",
+      "email": "reingard.fessler@connexia.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "connexia Gesellschaft für Gesundheit und Pflege gGmbH",
+    "adresse": "Quellenstrasse 16, 6900 Bregenz"
+  },
+  "quelle": {
+    "dateiname": "Berufsorientierung Betreuung und Pflege_2025-2026.pdf",
+    "ausstellungsdatum": "30.07.2025"
+  },
+  "teilregion": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "berufsorientierung-betreuung-und-pflege"
+}

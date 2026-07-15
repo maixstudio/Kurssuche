@@ -1,0 +1,95 @@
+{
+  "titel": "Kompetenzzentrum Dornbirn",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Dornbirn"
+  ],
+  "themen_tags": [
+    "Berufsorientierung",
+    "Bewerbungstraining",
+    "Karriereplanung"
+  ],
+  "zielgruppe_tags": [
+    "ab 25 Jahren"
+  ],
+  "altersgrenze": {
+    "von": 25,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Dornbirn vorgemerkte Personen ab 25 Jahren und älter.",
+  "ziel": "Die Teilnehmer_innen für den Arbeitsmarkt vorzubereiten und erfolgreich zu vermitteln. Dabei werden sie bei ihren Bewerbungen unterstützt und erhalten Orientierung in ihrer Bildungs- und Karriereplanung.",
+  "inhalt": {
+    "Clearing": [
+      "Alles wichtige über den Kurs erfahren",
+      "Berufsanalyse und Sozialanamnese",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsames Ausfüllen eines Förderantrages",
+      "Planung der weiteren Teilnahme"
+    ],
+    "Bildungs- und Karriereplanung": [
+      "Den eigenen Bildungs- und Karriereweg planen",
+      "Bildungswege und Fördermöglichkeiten erarbeiten",
+      "Der regionale Bildungs- und Arbeitsmarkt",
+      "Die Zukunft der Arbeit und Kompetenzen der Zukunft"
+    ],
+    "Netzwerken und verdeckter Arbeitsmarkt": [
+      "Richtiges arbeiten mit Netzwerken",
+      "Die eigenen Netzwerke erkennen und ausbauen",
+      "Was ist der verdeckte Arbeitsmarkt?"
+    ],
+    "Bewerbungsunterstützung": [
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Begleitung während des Bewerbungsprozesses",
+      "Grundlagen der Bewerbung und fortgeschrittene Bewerbungsunterstützung"
+    ],
+    "Kompetenzenprofil und offene Stellen": [
+      "Matching mit regionalen Stellenangeboten",
+      "Fachliche- und persönliche Kompetenzen",
+      "Berufs- und Stellenchancen"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Teilnahmedauer: 6 Wochen. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 825863 V 3",
+      "start": "15.09.2025"
+    },
+    {
+      "kursnummer": "M 825863 V 4",
+      "start": "27.10.2025"
+    },
+    {
+      "kursnummer": "M 825863 V 5",
+      "start": "15.12.2025"
+    },
+    {
+      "kursnummer": "M 825863 V 6",
+      "start": "23.02.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Kompetenzzentrum Dornbirn_2025.pdf",
+    "ausstellungsdatum": "05.11.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "kompetenzzentrum-dornbirn"
+}

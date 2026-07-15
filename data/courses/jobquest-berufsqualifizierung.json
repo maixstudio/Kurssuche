@@ -1,0 +1,94 @@
+{
+  "titel": "JobQuest Berufsqualifizierung",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Migration/Flucht",
+    "Berufsqualifizierung",
+    "Jugendliche"
+  ],
+  "zielgruppe_tags": [
+    "Fluchthintergrund",
+    "Migrationshintergrund"
+  ],
+  "altersgrenze": {
+    "von": 18,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Personen zwischen 18 und 24 Jahren mit Flucht- oder Migrationshintergrund: Drittstaatsangehörige mit längerfristiger Aufenthaltsperspektive, Asylberechtigte und subsidiär Schutzberechtigte, Vertriebene des Ukrainekonfliktes.",
+  "ziel": "Integration in den Arbeitsmarkt (Arbeitsaufnahme), Aufnahme einer Aus- und Weiterbildung, Festigung von Sprach- und Schlüsselkompetenzen, Reduktion des Fachkräftemangels.",
+  "inhalt": {
+    "Clearing": [
+      "Alles wichtige über den Kurs erfahren",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Klärung der aktuellen Situation",
+      "Netzwerk- und Ressourcenarbeit",
+      "Planung der weiteren Kursteilnahme"
+    ],
+    "Coaching": [
+      "Persönliche Beratung und Betreuung",
+      "Vertrauen schaffen und Motivation fördern",
+      "Planung von Aus- und Weiterbildung",
+      "Individuelle Unterstützung beim Lernen",
+      "Vernetzung mit Unternehmen, Institutionen, ..."
+    ],
+    "Gespräche mit Unternehmen": [
+      "Teilnahme an einem Praktikum",
+      "Unterstützung beim Einstieg in das Unternehmen",
+      "Feedbackgespräche mit dem Unternehmen"
+    ],
+    "Praxisunterricht im Unternehmen": [
+      "Berufsbilder und Unternehmen kennenlernen",
+      "Schlüsselqualifikationen erwerben",
+      "Theoriekenntnisse umsetzen",
+      "Vorbereitung auf eine weiterführende Ausbildung"
+    ],
+    "Theorieunterricht": [
+      "Digitale Kompetenzen und Sozialkompetenztraining",
+      "Bewerbungsunterstützung und Bewerbungstraining",
+      "Vorbereitungsinhalte nach Bedarf (z.B. PSA)",
+      "Exkursionen und Workshops"
+    ],
+    "Buddies und Mentor_in": [
+      "Pädagogische Begleitung",
+      "Tipps und Tricks von erfahrenen Teilnehmer_innen"
+    ],
+    "Berufsorientierung": [
+      "Feststellung der persönlichen Eignung",
+      "Informationen über den Arbeitsmarkt",
+      "Aktive Arbeits- und Ausbildungsplatzsuche",
+      "Bei Bedarf Neuorientierung"
+    ]
+  },
+  "form_und_dauer": "Kurszeitraum: 07.01.2026 bis 31.12.2027. Kurseinstieg: Jeden Montag nach Absprache. Teilnahmedauer: Bis zu 6 Monate.",
+  "termine": [
+    {
+      "kursnummer": "M 839440 V 1",
+      "start": "07.01.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Färbergasse 15, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "JobQuest_2026-2027.pdf",
+    "ausstellungsdatum": "08.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "jobquest-berufsqualifizierung"
+}

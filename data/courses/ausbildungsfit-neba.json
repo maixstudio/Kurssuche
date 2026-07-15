@@ -1,0 +1,92 @@
+{
+  "titel": "AusbildungsFit (NEBA)",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Bludenz",
+    "Feldkirch",
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Berufsorientierung",
+    "Behinderung/Lernbehinderung",
+    "Jugendliche"
+  ],
+  "zielgruppe_tags": [
+    "sonderpädagogischer Förderbedarf",
+    "Lernbehinderung",
+    "soziale/emotionale Beeinträchtigung"
+  ],
+  "altersgrenze": {
+    "von": null,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Jugendliche bis zum vollendeten 21. Lebensjahr bzw. bis zum vollendeten 24. Lebensjahr mit Behinderung bzw. sonderpädagogischem Förderbedarf, einer Lernbehinderung oder sozialen und/oder emotionalen Beeinträchtigungen, die eine Berufsausbildung absolvieren wollen und deren Berufswunsch zum aktuellen Zeitpunkt nicht klar scheint. Jugendliche, die zum Zeitpunkt des Eintritts mit der Absolvierung einer Berufsausbildung (auch einer TQ) aufgrund von Defiziten im Bereich definierter Basiskompetenzen überfordert sind.",
+  "ziel": "Durch eine individuelle Begleitung und Unterstützung den Jugendlichen einen erfolgreichen Wechsel von der Schule in eine weiterführende Ausbildung zu ermöglichen sowie die Suche nach einem Arbeits- und Ausbildungsplatz zu fördern. AusbildungsFit trainiert die Jugendlichen im Verhalten bei der Arbeit und mit anderen Menschen in der Berufswahlreife und bei der Einschätzung der eigenen Fähigkeiten.",
+  "inhalt": {
+    "Trainingsmodule": [
+      "Module Aktivierung, Übung und Spezialisierung: Erlernen von arbeitsrelevanten Fähigkeiten, Basiskompetenzen, Kulturtechniken und neuen Medien"
+    ],
+    "Coaching": [
+      "Individuelle Begleitung",
+      "Unterstützung beim Entwickeln und Umsetzen von realistischen Zukunftsperspektiven"
+    ],
+    "Wissenswerkstatt": [
+      "Wichtige Kompetenzen trainieren und eigenes Lernniveau erhöhen und festigen"
+    ],
+    "Bewegung und Sport": [
+      "Wichtigkeit von Bewegung und Sport erkennen und Freude an körperlichen Aktivitäten erfahren"
+    ],
+    "Praxisnahes Training in den Bereichen": [
+      "Holzwerkstatt",
+      "Metallwerkstatt",
+      "Einzelhandel",
+      "Gastronomie",
+      "Upcycling",
+      "Landwirtschaft",
+      "Digitalisierung",
+      "Sozialbegleitung"
+    ]
+  },
+  "form_und_dauer": "Teilnahmedauer: maximal 12 Monate, in begründeten Einzelfällen maximal 24 Monate. Eine individuelle Teilnahme ist nach Absprache ab dem 01.01.2025 bis zum 31.12.2027 möglich. Die Anmeldung erfolgt über das AMS mit Empfehlung des Jugendcoaching.",
+  "termine": [
+    {
+      "kursnummer": "M 322307 V 1",
+      "anmerkung": "AusbildungsFit (NEBA) Unterland",
+      "start": "laufend, 01.01.2025-31.12.2027"
+    },
+    {
+      "kursnummer": "M 322302 V 1",
+      "anmerkung": "AusbildungsFit (NEBA) Feldkirch",
+      "start": "laufend, 01.01.2025-31.12.2027"
+    },
+    {
+      "kursnummer": "M 806453 V 1",
+      "anmerkung": "AusbildungsFit (NEBA) Bludenz",
+      "start": "laufend, 01.01.2025-31.12.2027"
+    }
+  ],
+  "veranstaltungsort": [
+    "Konrad-Doppelmayr-Straße 13, 6922 Wolfurt (Unterland)",
+    "Reichsstraße 150, 6800 Feldkirch (Feldkirch)",
+    "Klarenbrunnstraße 12, 6700 Bludenz (Bludenz)"
+  ],
+  "kontakt": [
+    {
+      "name": "Dipl. Soz. Päd. Kathrin Ofner",
+      "telefon": "+43 664 8834 7090",
+      "email": "kathrin.ofner@integra.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "Integra Vorarlberg gGmbH",
+    "adresse": "Konrad-Doppelmayr-Straße 13, 6922 Wolfurt"
+  },
+  "quelle": {
+    "dateiname": "AusbildungsFit (NEBA)_2025-2027.pdf",
+    "ausstellungsdatum": "26.11.2024"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "ausbildungsfit-neba"
+}

@@ -1,0 +1,93 @@
+{
+  "titel": "Informationsseminar Wiedereinstieg Bregenz",
+  "massnahmentyp": "Bildungsmaßnahme - Orientierung",
+  "regionen": [
+    "Bregenz"
+  ],
+  "themen_tags": [
+    "Wiedereinstieg",
+    "Frauen",
+    "Vereinbarkeit Familie und Beruf"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen",
+    "Betreuungspflichten"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Bregenz vorgemerkte Frauen mit Unterstützungsbedarf aufgrund von Betreuungspflichten oder anderen Vereinbarkeitsthemen von Familie und Beruf, sowie Wiedereinsteigerinnen nach der Elternkarenz.",
+  "ziel": "Die Teilnehmerinnen durch Informationen und Orientierung zu einer aktiven Gestaltung des beruflichen Wiedereinstieges zu motivieren, damit ein (existenzsicherndes) Einkommen erzielt werden kann.",
+  "inhalt": [
+    "Berufe mit Zukunft und Trends am Arbeitsmarkt",
+    "Berufskunde und regionaler Arbeitsmarkt",
+    "Arbeitsrecht, Arbeitsverträge und Gehaltsverhandlungen",
+    "Mit den eigenen Fähigkeiten und Interessen arbeiten",
+    "Kinderbetreuung in Vorarlberg",
+    "Beihilfen und Weiterbildungsangebote",
+    "Schritte auf dem Weg ins Berufsleben",
+    "Anforderungen und Erwartungen an eine neue Mitarbeiterinnen",
+    "Bewerbungsvorbereitung und Unterstützung bei der Arbeitssuche",
+    "Outfit und Auftritt - Styling Tipps für den Beruf",
+    "Empowerment - Beispiele von Frauen die es geschafft haben",
+    "Gleichgewicht zwischen Berufs- und Privatleben",
+    "Stressmanagement und Stressbewältigung",
+    "Selbstbewusst am Arbeitsplatz",
+    "Multikulturelle Arbeitswelt"
+  ],
+  "form_und_dauer": "Teilnahmedauer: 1 Woche. Einzelcoaching: Individuelle Beratung je nach Bedarf der Teilnehmerinnen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Eine Teilnahme ist nach Absprache ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 838499 V 1",
+      "start": "16.03.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 2",
+      "start": "13.04.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 3",
+      "start": "04.05.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 4",
+      "start": "14.09.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 5",
+      "start": "12.10.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 6",
+      "start": "16.11.2026"
+    },
+    {
+      "kursnummer": "M 838499 V 7",
+      "start": "01.02.2027"
+    }
+  ],
+  "veranstaltungsort": [
+    "Wolfeggstraße 11, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": null,
+      "telefon": "+43 676 3862290",
+      "email": "office@donna.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Informationsseminar Wiedereinstieg Bregenz_2026.pdf",
+    "ausstellungsdatum": "14.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "informationsseminar-wiedereinstieg-bregenz"
+}

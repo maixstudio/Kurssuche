@@ -1,0 +1,104 @@
+{
+  "titel": "Business Park – Die andere Übungsfirma",
+  "massnahmentyp": "Training",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Wiedereinstieg",
+    "Kaufmännisch",
+    "Büro",
+    "Digitalisierung"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen"
+  ],
+  "sprachniveau": "B1",
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Frauen, besonders (Berufs-)Wiedereinsteigerinnen mit Berufserfahrung im kaufmännischen Bereich. Voraussetzungen: Deutschkenntnisse von mindestens B1 und Grundlagenwissen rund um die Benutzung von EDV Geräten.",
+  "ziel": "Die Teilnehmerinnen im Bereich der kaufmännischen Berufe zu qualifizieren, bereits vorhandenes Wissen zu vertiefen und neue Perspektiven am Arbeitsmarkt zu ermöglichen.",
+  "inhalt": {
+    "Infoveranstaltung": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Anmeldung und Testung der BBRZ Leihgeräte",
+      "Überprüfung von Deutsch-, EDV- und kaufmännischen Kenntnissen"
+    ],
+    "Business Park": [
+      "Nachstellen eines realen Arbeitsalltags",
+      "Richtiges Verhalten im Berufs- und Geschäftsleben",
+      "Kaufmännische Grundkompetenzen erweitern",
+      "Weiterentwicklung digitaler Fähigkeiten"
+    ],
+    "Gesundheitstraining": [
+      "Verschiedene Arten der Bewegung kennenlernen",
+      "Bewegung in den Alltag integrieren",
+      "Entwicklung eines besseren Körpergefühls",
+      "Kraft- und koordinative Fähigkeiten verbessern",
+      "Entspannungstraining und Stärkung der Resilienz"
+    ],
+    "Farb- und Stilberatung": [
+      "Warum machen Stil und Farbe einen Unterschied?",
+      "Was passt zu mir und wie fühle ich mich wohl?",
+      "Wie kleide ich mich bei Vorstellungsgesprächen?",
+      "Wie kleide ich mich im Berufsleben?"
+    ],
+    "Kompetenztraining": [
+      "Was sind Kompetenzen?",
+      "Welche Kompetenzen gibt es?",
+      "Wann werden welche Kompetenzen benötigt?",
+      "Wie eigne ich mir Kompetenzen an?",
+      "Wie stärke ich vorhandene Kompetenzen?"
+    ],
+    "Berufsorientierung": [
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Arbeiten mit digitalen AMS Angeboten",
+      "Aktive Praktikums- und Arbeitssuche"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmerinnen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Form: Online und Präsenz. Teilnahmedauer: 16 Wochen. Vor Kursbeginn findet eine Infoveranstaltung statt. Eine Teilnahme ist nach Vereinbarung ab den folgenden Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 828188 V 1",
+      "start": "08.09.2025",
+      "anmerkung": "Infoveranstaltung 25.08.2025"
+    },
+    {
+      "kursnummer": "M 828188 V 2",
+      "start": "26.01.2026",
+      "anmerkung": "Infoveranstaltung 12.01.2026"
+    },
+    {
+      "kursnummer": "M 828188 V 3",
+      "start": "18.05.2026",
+      "anmerkung": "Infoveranstaltung 04.05.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Vorarlberger Wirtschaftspark 1, 6840 Götzis"
+  ],
+  "kontakt": [
+    {
+      "name": "Sonja Hosner",
+      "telefon": "+43 664 8543000",
+      "email": "sonja.hosner@bbrz.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "BBRZ Beruflisches Bildungs- und Rehabilitationszentrum",
+    "adresse": "Vorarlberger Wirtschaftspark 1, 6840 Götzis"
+  },
+  "quelle": {
+    "dateiname": "Business Park_2025.pdf",
+    "ausstellungsdatum": "17.03.2025"
+  },
+  "teilregion": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "business-park-die-andere-uebungsfirma"
+}

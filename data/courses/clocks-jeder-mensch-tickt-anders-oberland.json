@@ -1,0 +1,148 @@
+{
+  "titel": "Clocks – Jeder Mensch tickt anders Oberland",
+  "massnahmentyp": "Training",
+  "regionen": [
+    "Bludenz",
+    "Feldkirch"
+  ],
+  "teilregion": "Oberland",
+  "themen_tags": [
+    "Psychosoziale Stabilisierung",
+    "Jugendliche",
+    "Arbeitsmarktintegration"
+  ],
+  "zielgruppe_tags": [
+    "Vermittlungshindernisse",
+    "psychische Auffälligkeiten",
+    "Suchtproblematik"
+  ],
+  "altersgrenze": {
+    "von": 15,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Bludenz und Feldkirch vorgemerkte Jugendliche ab dem 15. bis zum vollendeten 24. Lebensjahr mit Vermittlungshindernissen: Psychische Auffälligkeiten, Mobbingerfahrungen, Anspannungszustände mit hoher Impulsivität, Aggressivität oder starke Gefühls- und Stimmungsschwankungen, Beziehungs- und Bindungsstörungen, Hochrisikoverhalten, Drogen- oder Alkoholmissbrauch, Anorexia nervosa und Bulimie, Riskantes Beziehungs- und Sexualverhalten, Illegales Verhalten, Häufige Suizidgedanken, Selbstverletzendes Verhalten, Unsicherheit über das eigene Selbstbild, Fehlverarbeitung traumatischer Erfahrungen.",
+  "ziel": "Die Teilnehmer_innen für den Arbeitsmarkt vorzubereiten, in den Arbeitsmarkt zu integrieren (Ausbildung oder Arbeitsplatz) sowie die Verbesserung von persönlichen Bewältigungsstrategien zu fördern.",
+  "inhalt": {
+    "Einstieg": [
+      "Alles wichtige über den Kurs erfahren",
+      "Eine bewusste Teilnahme fördern",
+      "Klärung der aktuellen Situation",
+      "Gemeinsam konkrete Ziele festlegen"
+    ],
+    "Aktivierung": [
+      "Kennenlernen und Teambildung",
+      "Standortbestimmung",
+      "Exkursionen und Firmenbesichtigungen",
+      "Klären von Fähigkeiten und Ressourcen"
+    ],
+    "Training": [
+      "Sozial- und Methodenkompetenz",
+      "Selbst- und Persönlichkeitskompetenz",
+      "Bewerbungsunterlagen und Eigeninserat erstellen",
+      "Digitale AMS Angebote kennenlernen"
+    ],
+    "Projekt": [
+      "Gemeinsame Themensuche und Projektumsetzung"
+    ],
+    "Workshops": [
+      "Sucht, Medienkompetenz, Grundlagen der IT"
+    ],
+    "Praktikum": [
+      "Mitarbeit in einem Praxisangebot der AQUA Mühle",
+      "Mitarbeit in einem Kooperationsbetrieb"
+    ],
+    "Abschied": [
+      "Reflexion der vergangenen Monate",
+      "Das erlernte im Alltag umsetzen",
+      "Offene Schritte und weitere Vernetzung"
+    ],
+    "Weitere Bausteine": [
+      "Begleitendes Modul Personalservice",
+      "Nachbetreuung bei Bedarf"
+    ]
+  },
+  "form_und_dauer": "Einzelcoaching: Individuelle Beratung je nach Bedarf, Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Teilnahmedauer: 34 Wochen (inklusive Nachbetreuung). Eine Teilnahme ist nach Absprache ab den angegebenen Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 826430 V 1",
+      "start": "21.07.2025",
+      "anmerkung": "Info 07.07.2025"
+    },
+    {
+      "kursnummer": "M 826430 V 2",
+      "start": "29.09.2025",
+      "anmerkung": "Info 15.09.2025"
+    },
+    {
+      "kursnummer": "M 826430 V 3",
+      "start": "24.11.2025",
+      "anmerkung": "Info 10.11.2025"
+    },
+    {
+      "kursnummer": "M 826430 V 4",
+      "start": "02.03.2026",
+      "anmerkung": "Info 16.02.2026"
+    },
+    {
+      "kursnummer": "M 826430 V 5",
+      "start": "01.06.2026",
+      "anmerkung": "Info 18.05.2026"
+    },
+    {
+      "kursnummer": "M 826430 V 6",
+      "start": "12.10.2026",
+      "anmerkung": "Info 28.09.2026"
+    },
+    {
+      "kursnummer": "M 826430 V 7",
+      "start": "08.03.2027",
+      "anmerkung": "Info 22.02.2027"
+    },
+    {
+      "kursnummer": "M 826430 V 8",
+      "start": "10.05.2027",
+      "anmerkung": "Info 26.04.2027"
+    },
+    {
+      "kursnummer": "M 826430 V 9",
+      "start": "20.09.2027",
+      "anmerkung": "Info 06.09.2027"
+    },
+    {
+      "kursnummer": "M 826430 V 10",
+      "start": "02.11.2027",
+      "anmerkung": "Info 18.10.2027"
+    },
+    {
+      "kursnummer": "M 826430 V 11",
+      "start": "31.01.2028",
+      "anmerkung": "Info 17.01.2028"
+    },
+    {
+      "kursnummer": "M 826430 V 12",
+      "start": "18.04.2028",
+      "anmerkung": "Info 03.04.2028"
+    }
+  ],
+  "veranstaltungsort": [
+    "Obere Lände 5b, 6820 Frastanz"
+  ],
+  "kontakt": [
+    {
+      "name": "Christian Neyer",
+      "telefon": "+43 5522 5159643",
+      "email": "christian.neyer@aquamuehle.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "AQUA Mühle Vorarlberg gGmbH",
+    "adresse": "Obere Lände 5b, 6820 Frastanz"
+  },
+  "quelle": {
+    "dateiname": "Clocks - Jeder Mensch tickt anders Oberland_2025-2028.pdf",
+    "ausstellungsdatum": "18.02.2025"
+  },
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "clocks-jeder-mensch-tickt-anders-oberland"
+}

@@ -1,0 +1,62 @@
+{
+  "titel": "Überbetriebliche Lehrausbildung Lehrgangsphase (ÜBN2)",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Lehrausbildung",
+    "Berufsschule"
+  ],
+  "zielgruppe_tags": [
+    "Lehrstellensuchende",
+    "Pflichtschulabschluss"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Lehrstellensuchende mit Pflichtschulabschluss, die keine weiterführende schulische oder berufliche Ausbildung besitzen, die keine geeignete Lehrstelle gefunden haben oder eine betriebliche Lehre abgebrochen haben, die einen Lehrstellenwunsch aufweisen und bereits über einen Praktikumsplatz verfügen, welcher zum Start der Ausbildung genutzt werden kann. Ein Quereinstieg (ohne Teilnahme an der VÜBA) ist möglich, wenn bereits ein Unternehmen für die Lehrausbildung gefunden wurde.",
+  "ziel": "Den Teilnehmer_innen fachliche Qualifikationen für die angestrebten Lehrberufe zu vermitteln sowie die Integration in den Arbeitsmarkt (Wechsel auf eine betriebliche Lehrstelle) zu ermöglichen und/oder das Erreichen des Lehrabschlusses zu fördern.",
+  "inhalt": [
+    "Auffrischung der Schulkenntnisse",
+    "Unterstützung des Berufsschulbesuches",
+    "Vertiefung der Kenntnisse aus der Praxis",
+    "Vorbereitung auf die Lehrabschlussprüfung",
+    "Training von Schlüsselkompetenzen",
+    "Zeitmanagement: Work Life Balance",
+    "Konfliktmanagement und Umgang mit Konflikten",
+    "Kommunikations- und Teamtraining",
+    "Unterstützung durch ausgebildete Expert_innen",
+    "Für junge Frauen werden Workshops zu den Themen Ausbildung, Beruf und Arbeit angeboten"
+  ],
+  "form_und_dauer": "Teilnahmedauer: 52 Wochen. Eine Teilnahme ist nach Vereinbarung ab dem 12.09.2025 möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 833356 V1",
+      "start": "12.09.2025"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Überbetriebliche Lehrausbildung Lehrgangsphase (ÜBN2)_2025-2026.pdf",
+    "ausstellungsdatum": "30.07.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "ueberbetriebliche-lehrausbildung-lehrgangsphase-uebn2"
+}

@@ -1,0 +1,76 @@
+{
+  "titel": "ÖIF Deutsch & Integration – Infotermin und Qualifizierung",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Deutsch/Sprache",
+    "Integration",
+    "Migration/Flucht"
+  ],
+  "zielgruppe_tags": [
+    "Konventionsflüchtlinge",
+    "subsidiär Schutzberechtigte"
+  ],
+  "sprachniveau": "B1",
+  "altersgrenze": {
+    "von": 15,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Konventionsflüchtlinge oder subsidiär Schutzberechtigte ab dem 15. Lebensjahr.",
+  "ziel": "Den Teilnehmer_innen ein Sprachniveau von mindestens B1 (nach dem gemeinsamen europäischen Referenzrahmen für Sprachen) zu vermitteln.",
+  "inhalt": {
+    "Infotag": [
+      "Überprüfung der Voraussetzungen für einen Deutschkurs",
+      "Spracheinstufung und Kursanmeldung",
+      "Klärung der weiteren Vorgehensweise",
+      "Informationen zur Individualförderung durch den ÖIF"
+    ],
+    "Mitzubringende Unterlagen für den Infotermin": [
+      "Identifikationsdokument",
+      "e-Card",
+      "Meldezettel",
+      "Asylbescheid",
+      "Deutschzertifikate oder Teilnahmebestätigungen",
+      "Mitteilung über den Erhalt von Mindestsicherung oder Sozialhilfe",
+      "Mitteilung über den Erhalt von Arbeitslosengeld oder Notstandshilfe",
+      "MeinAMS Zugangsdaten"
+    ],
+    "Qualifizierung": [
+      "Alle Kurse ab dem Sprachniveau A2 schließen mit einer Prüfung des Österreichischen Integrationsfonds ab"
+    ]
+  },
+  "form_und_dauer": "Ein Kurs kann pro Sprachniveau je nach Bedarf der Teilnehmer_innen grundsätzlich 80, 160 oder 240 Unterrichtseinheiten umfassen. Bei Bedarf erfolgt vorab eine Alphabetisierung. Infotermin jeden Dienstag ab dem 13.01.2026 bis zum 15.12.2026.",
+  "termine": [
+    {
+      "kursnummer": "M 839376 V 1 bis V 50",
+      "anmerkung": "Infotermin, jeden Dienstag ab 13.01.2026 bis 15.12.2026"
+    },
+    {
+      "kursnummer": "M 839996 V 1",
+      "anmerkung": "Qualifizierung, Ort/Termin/Dauer laut Kursanmeldebestätigung"
+    }
+  ],
+  "veranstaltungsort": [
+    "Bahnhofstraße 10, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": null,
+      "telefon": "0043 50468 0",
+      "email": "teilnehmer.startpaket@integrationsfonds.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "ÖIF Österreichischer Integrations Fond",
+    "adresse": "Schlachthausgasse 30, 1030 Wien"
+  },
+  "quelle": {
+    "dateiname": "ÖIF Deutsch und Integration_2026.pdf",
+    "ausstellungsdatum": "20.01.2026"
+  },
+  "teilregion": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "oeif-deutsch-integration-infotermin-und-qualifizierung"
+}

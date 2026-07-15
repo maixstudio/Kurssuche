@@ -1,0 +1,66 @@
+{
+  "titel": "FIT handwerklich technische Vorqualifizierung",
+  "massnahmentyp": "Aus- und Weiterbildung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Handwerk/Technik",
+    "Frauen",
+    "Vorqualifizierung"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Mädchen"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Frauen und Mädchen mit Interesse an einer technischen Ausbildung. Frauen mit Fachhochschul- oder Universitätsabschluss dürfen bei Nichtverwertbarkeit ihres Studiums und nach Genehmigung durch die zuständige RGS Leitung ebenfalls am Programm teilnehmen.",
+  "ziel": "Die Teilnehmerinnen zu orientieren und in nicht traditionellen Ausbildungen mit mindestens Lehrabschluss zu qualifizieren.",
+  "inhalt": [
+    "Lerntypen und Lernstrategien",
+    "Kommunikation und Umgang mit Konflikten",
+    "Schlüssel- und Sozialkompetenz",
+    "Eigenverantwortung und Selbstständigkeit",
+    "Bewerbungsunterlagen und Bewerbungstraining",
+    "Bedeutung von eigenen Netzwerken",
+    "Auseinandersetzung mit dem Arbeitsmarkt",
+    "Rollenbilder und Rollenstereotype",
+    "Basisqualifizierung EDV, Mathematik, Physik, Chemie und Technisches Englisch",
+    "Spezialthemen je nach Bedarf (z.B. Vereinbarkeit von Familie und Beruf, ...)",
+    "Vertiefende Qualifizierung und/oder Workshops",
+    "Vor- und Nachbereitung von Praktikum und Arbeitserprobung"
+  ],
+  "form_und_dauer": "Einzelne Kursinhalte können auch am Nachmittag stattfinden. Teilnahmedauer: 9 Wochen (inklusive 1 Woche Praktikum). Eine Teilnahme ist nach Vereinbarung ab dem folgenden Starttermin möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 839181 V 1",
+      "start": "07.04.2026",
+      "anmerkung": "laufender Einstieg"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "FIT handwerklich technische Vorqualifizierung_2026.pdf",
+    "ausstellungsdatum": "29.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "fit-handwerklich-technische-vorqualifizierung"
+}

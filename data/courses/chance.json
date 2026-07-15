@@ -1,0 +1,59 @@
+{
+  "titel": "Chance",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Lehrabschluss",
+    "Fachkräfteförderung",
+    "Unternehmensförderung"
+  ],
+  "zielgruppe_tags": [
+    "Weiterbildung",
+    "Umschulung"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Personen (unabhängig davon ob ein Anspruch auf Versicherungsleistungen besteht), die einen konkreten individuellen Ausbildungsbedarf und Interesse an einer am Arbeitsmarkt nachgefragten Aus- oder Weiterbildung haben. Unternehmen mit Sitz in Vorarlberg, die einen Fachkräftemangel aufweisen. Nicht förderbar sind Personen, die für eine Teilnahme an Chance ihre Beschäftigung beenden, sowie Umschulungen von einem Lehrabschluss zu einem anderen.",
+  "ziel": "Die Teilnehmer_innen erhalten die Möglichkeit einer praxisnahen Aus- oder Weiterbildung sowie Qualifizierung. Unternehmen erhalten die Möglichkeit, gesuchte Fachkräfte gezielt für ihren Bedarf auszubilden.",
+  "inhalt": {
+    "Teilnehmer_innen": [
+      "Erhalten eine Leistung aus dem Arbeitslosenversicherungsgesetz und sind Arbeitslosen-, Unfall- und Pensionsversichert.",
+      "Zuzüglich € 100,- Stipendium pro Monat, bzw. € 200,- pro Monat bei einer Lehrabschlussprüfung."
+    ],
+    "Kosten für das Unternehmen": [
+      "€ 524,- pro Monat inklusive Stipendium",
+      "€ 442,- pro Monat inklusive Stipendium bei einer Lehrabschlussprüfung",
+      "Ausbildungskosten die € 7.000,- übersteigen werden von Land Vorarlberg und AMS übernommen."
+    ]
+  },
+  "form_und_dauer": "Zeitraum: 01.01.2026 bis 31.12.2028. Eintritte sind bis zum 31.12.2026 möglich. Ohne Lehrabschlussprüfung: 13 Wochen bis maximal 6 Monate (theoretische und externe Ausbildung mind. 1/3 der gesamten Dauer). Mit Lehrabschlussprüfung: Dauer richtet sich nach der laut Wirtschaftskammer fehlenden Berufspraxis, maximal 2 Jahre Verweildauer ohne anrechenbare Praxis, LAP wird im Dienstverhältnis nachgeholt.",
+  "termine": [
+    {
+      "kursnummer": "M 838451 V 1"
+    }
+  ],
+  "kontakt": [
+    {
+      "name": "Bettina Marjanovic",
+      "telefon": "+43 664 8542789",
+      "email": "bettina.marjanovic@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Chance_2026.pdf",
+    "ausstellungsdatum": "16.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "veranstaltungsort": [],
+  "id": "chance"
+}

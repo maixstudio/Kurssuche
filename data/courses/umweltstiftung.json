@@ -1,0 +1,80 @@
+{
+  "titel": "Umweltstiftung",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Umwelt/Green Jobs",
+    "Lehrabschluss",
+    "Höherqualifizierung",
+    "Stiftung"
+  ],
+  "zielgruppe_tags": [],
+  "sprachniveau": "B1",
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Personen, die Anspruch auf Arbeitslosengeld, Notstandshilfe oder eine Deckung des Lebensunterhaltes haben, über maximal Pflichtschulabschluss oder eine nicht mehr verwertbare Qualifikation verfügen, alle Voraussetzungen zur Teilnahme an einer tertiären oder nicht tertiären hochschulischen Aus- und Weiterbildung erfüllen und über Deutschkenntnisse auf mindestens B1 Niveau verfügen. Unternehmen die Personal suchen und potenziellen neuen Mitarbeiter_innen Qualifikationen vermitteln, die für den Lehrabschluss, eine Fachhelfer_innen Ausbildung, oder Höherqualifizierungen im Umweltbereich von Relevanz sind.",
+  "ziel": "Den Teilnehmer_innen eine Qualifizierung im ökologischen Bereich zu ermöglichen, die Aufnahme eines vollversicherten Dienstverhältnisses zu fördern und offene Stellen passgenau zu besetzen. Besonders Frauen erhalten die Möglichkeit ihre berufliche Qualifikation bewusst in den handwerklich-technischen und technologischen Bereich zu steuern.",
+  "inhalt": {
+    "Berufsorientierung": [
+      "Erarbeitung eines Ausbildungsziels und der Planung der Qualifizierung"
+    ],
+    "Qualifizierungsbereiche": [
+      "Abfall- und Ressourcenwirtschaft",
+      "Green Mobility",
+      "Energieaufbringung und Energieverteilung",
+      "Land- und forstwirtschaftliche Fachberufe",
+      "Berufe im Bereich Bildung, und Lebensstil (Greencare und Soziales)",
+      "Gebäudetechnik"
+    ],
+    "Teilnehmer_innen": [
+      "Erhalten durch das Arbeitsmarktservice eine Existenzsicherung in der Höhe des Arbeitslosengeldes, der Notstandshilfe oder der Deckung des Lebensunterhaltes (DLU).",
+      "Ausbildungskostenzuschuss von € 200,- pro Monat.",
+      "Teilnehmer_innen die an einer überregionalen Praktikumsmöglichkeit interessiert sind und auch bereit sind, ein vollversichertes Dienstverhältnis in diesem Betrieb anzunehmen, werden mit einem Mobilitätspaket gefördert."
+    ],
+    "Unternehmen": [
+      "€ 500,- pro Monat (davon sind € 200,- für den Ausbildungskostenzuschuss und € 300,- für die Verwaltungskosten)"
+    ]
+  },
+  "form_und_dauer": "Zeitraum: 01.04.2022 bis 31.03.2030. Der Anteil der theoretischen Ausbildung soll mindestens 30% von der gesamten Ausbildungszeit betragen. Die Dauer der Teilnahme richtet sich nach der angestrebten Qualifikation.",
+  "termine": [
+    {
+      "kursnummer": "M 779231 V 14",
+      "anmerkung": "Lehrabschlussprüfung"
+    },
+    {
+      "kursnummer": "M 779232 V 14",
+      "anmerkung": "Lehrabschlussprüfung Fit Liste"
+    },
+    {
+      "kursnummer": "M 779234 V 14",
+      "anmerkung": "Fachhelfer_innenausbildung"
+    },
+    {
+      "kursnummer": "M 779235 V 14",
+      "anmerkung": "Höherqualifizierung inklusive tertiärer Bereich"
+    }
+  ],
+  "kontakt": [
+    {
+      "name": "Lukas Pichler",
+      "telefon": "+43 664 8565981",
+      "email": "lukas.pichler@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "AUFLEB GmbH (Stiftungsträger)",
+    "adresse": "Hoher Markt 2C, 1010 Wien"
+  },
+  "quelle": {
+    "dateiname": "Umweltstiftung_2022-2030.pdf",
+    "ausstellungsdatum": "16.01.2026"
+  },
+  "teilregion": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "veranstaltungsort": [],
+  "id": "umweltstiftung"
+}

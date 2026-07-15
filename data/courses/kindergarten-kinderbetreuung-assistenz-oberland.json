@@ -1,0 +1,97 @@
+{
+  "titel": "Kindergarten - Kinderbetreuung Assistenz Oberland",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Bludenz",
+    "Feldkirch"
+  ],
+  "teilregion": "Oberland",
+  "themen_tags": [
+    "Kinderbetreuung",
+    "Pädagogik",
+    "Frauen"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen",
+    "Migrationshintergrund"
+  ],
+  "sprachniveau": "B2",
+  "altersgrenze": {
+    "von": 25,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Bludenz oder Feldkirch vorgemerkte Frauen ab 25 Jahren sowie Wiedereinsteigerinnen (auch mit Migrationshintergrund) die gerne mit Kindern arbeiten. Voraussetzung: Positiv absolvierte 9. Schulstufe, einwandfreier Leumund und ärztliches Attest, Deutsch in Wort und Schrift (mindestens B2, die Zertifizierung muss bei Kursbeginn vorliegen).",
+  "ziel": "Die Teilnehmerinnen bestmöglich auf ihre Arbeit mit Kindern vorzubereiten und ihnen das nötige pädagogische Wissen zu vermitteln, um die Kinder fachgerecht begleiten zu können.",
+  "inhalt": {
+    "Infoveranstaltung": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Klärung der Aufnahmevoraussetzungen",
+      "Schriftliche Testung und Auswahlverfahren",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsames Ausfüllen eines Förderantrages"
+    ],
+    "Fachinhalte": [
+      "Persönlichkeit und Selbstkompetenz",
+      "Grundlagen der pädagogischen Arbeit in Kinderbetreuungseinrichtungen",
+      "Grundlagen der Entwicklungspsychologie",
+      "Verhaltens- und Kommunikationstraining",
+      "Sensibilisierung für Auffälligkeiten",
+      "Rechtliche Grundlagen",
+      "Sprach- und Sprechförderung",
+      "Gesundheits- und Ernährungslehre",
+      "Erste Hilfe Maßnahmen bei Kleinkindern",
+      "Interkulturelle Kompetenz und Vielfalt",
+      "Verkehrserziehung",
+      "Exkursionen"
+    ],
+    "Bewerbungstraining": [
+      "Stellenanzeigen richtig lesen",
+      "Aktuelle Bewerbungsunterlagen erstellen",
+      "Aktive Arbeits- und Praktikumssuche"
+    ],
+    "Praktikum": [
+      "Erste Erfahrungen sammeln",
+      "Die Arbeit mit Kindern kennenlernen",
+      "Bereits gelerntes in die Praxis umsetzen"
+    ],
+    "Abschlussarbeit": [
+      "Themenauswahl",
+      "Schriftliche und praktische Umsetzung",
+      "Präsentation"
+    ]
+  },
+  "form_und_dauer": "Einzelne Kursinhalte können auch am Nachmittag stattfinden. Einzelcoaching: Individuelle Beratung je nach Bedarf der Teilnehmerinnen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Teilnahmedauer: 11 Wochen, inklusive 4 Wochen Praktikum. Eine Teilnahme ist nach Vereinbarung ab den folgenden Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 839580 V 1",
+      "start": "13.04.2026",
+      "anmerkung": "Infoveranstaltung 31.03.2026"
+    },
+    {
+      "kursnummer": "M 839580 V 2",
+      "start": "21.09.2026",
+      "anmerkung": "Infoveranstaltung 08.09.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Göfiser Straße 2, 6800 Feldkirch (Schützenhaus)"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Kindergarten-Kinderbetreuung Assistenz Oberland_2026.pdf",
+    "ausstellungsdatum": "27.01.2026"
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "kindergarten-kinderbetreuung-assistenz-oberland"
+}

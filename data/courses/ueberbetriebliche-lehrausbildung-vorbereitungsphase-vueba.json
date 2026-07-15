@@ -1,0 +1,115 @@
+{
+  "titel": "Überbetriebliche Lehrausbildung Vorbereitungsphase (VÜBA)",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Lehrausbildung",
+    "Berufsorientierung"
+  ],
+  "zielgruppe_tags": [
+    "Lehrstellensuchende",
+    "Pflichtschulabschluss"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Lehrstellensuchende mit Pflichtschulabschluss, die keine weiterführende schulische oder berufliche Ausbildung besitzen und keine geeignete Lehrstelle gefunden haben oder eine betriebliche Lehre abgebrochen haben.",
+  "ziel": "Den Teilnehmer_innen fachliche Qualifikationen zu vermitteln, ein rascher Übergang in die Lehrgangsphase (ÜBN2) zu ermöglichen sowie die Aufnahme einer Lehrausbildung zu fördern.",
+  "inhalt": [
+    "Kommunikationstraining und Konfliktmanagement",
+    "Stärken und Schwächen erarbeiten",
+    "Die eigenen Kenntnisse und Interessen benennen",
+    "Soziale Fertigkeiten für die moderne Berufswelt",
+    "Bei Bedarf EDV Grundlagenschulung",
+    "Planung der eigenen beruflichen Zukunft",
+    "Bewerbungstraining und Bewerbungsstrategien",
+    "Erstellung von Bewerbungsunterlagen",
+    "Zeitmanagement - Moderner Umgang mit Zeit",
+    "Den passenden Lehrberuf wählen",
+    "Organisation der Berufsschule",
+    "Workshop Chancengleichheit",
+    "Kurzinfo Arbeitsrecht",
+    "Tipps und Tricks zur Eigenpräsentation",
+    "Die ersten Tage im Job – Der gelungene Einstieg",
+    "Der richtige Umgang mit Vorgesetzten und Arbeitskolleg_innen",
+    "Aktive Suche nach einem Praktikum und einer Lehrstelle"
+  ],
+  "form_und_dauer": "Teilnahmedauer: 10 Wochen. Vor dem jeweiligen Starttermin findet eine Infoveranstaltung statt. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 833357 V 1",
+      "start": "08.09.2025",
+      "anmerkung": "Infoveranstaltung 25.08.2025"
+    },
+    {
+      "kursnummer": "M 833357 V 2",
+      "start": "06.10.2025",
+      "anmerkung": "Infoveranstaltung 22.09.2025"
+    },
+    {
+      "kursnummer": "M 833357 V 3",
+      "start": "10.11.2025",
+      "anmerkung": "Infoveranstaltung 27.10.2025"
+    },
+    {
+      "kursnummer": "M 833357 V 4",
+      "start": "09.12.2025",
+      "anmerkung": "Infoveranstaltung 24.11.2025"
+    },
+    {
+      "kursnummer": "M 833357 V 5",
+      "start": "19.01.2026",
+      "anmerkung": "Infoveranstaltung 12.01.2026"
+    },
+    {
+      "kursnummer": "M 833357 V 6",
+      "start": "23.02.2026",
+      "anmerkung": "Infoveranstaltung 09.02.2026"
+    },
+    {
+      "kursnummer": "M 833357 V 7",
+      "start": "23.03.2026",
+      "anmerkung": "Infoveranstaltung 09.03.2026"
+    },
+    {
+      "kursnummer": "M 833357 V 8",
+      "start": "07.04.2026",
+      "anmerkung": "Infoveranstaltung 23.03.2026"
+    },
+    {
+      "kursnummer": "M 833357 V 9",
+      "start": "01.06.2026",
+      "anmerkung": "Infoveranstaltung 18.05.2026"
+    },
+    {
+      "kursnummer": "M 833357 V 10",
+      "start": "22.06.2026",
+      "anmerkung": "Infoveranstaltung 08.06.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Überbetriebliche Lehrausbildung Vorbereitungsphase (VÜBA)_2025-2026.pdf",
+    "ausstellungsdatum": "21.10.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "ueberbetriebliche-lehrausbildung-vorbereitungsphase-vueba"
+}

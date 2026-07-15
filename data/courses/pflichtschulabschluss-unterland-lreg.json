@@ -1,0 +1,94 @@
+{
+  "titel": "Pflichtschulabschluss Unterland (LREG)",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Bregenz",
+    "Dornbirn"
+  ],
+  "teilregion": "Unterland",
+  "themen_tags": [
+    "Pflichtschulabschluss",
+    "Jugendliche",
+    "Bildungsabschluss"
+  ],
+  "zielgruppe_tags": [
+    "ohne Pflichtschulabschluss"
+  ],
+  "sprachniveau": "A2",
+  "altersgrenze": {
+    "von": 15,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Bregenz und Dornbirn vorgemerkte Personen zwischen 15 und 24 Jahren ohne Pflichtschulabschluss und einem Sprachniveau von mindestens A2.",
+  "ziel": "Die Teilnehmer_innen beim Erreichen eines positiven Pflichtschulabschlusses zu unterstützen und den Einstieg in eine weiterführende schulische Ausbildung oder in eine Berufsausbildung zu fördern.",
+  "inhalt": {
+    "Infoveranstaltung": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Klärung und Testung der Aufnahme",
+      "Bekanntgabe der Zu- oder Absage"
+    ],
+    "Vormodul": [
+      "Vorbereitung auf den Pflichtschulabschluss",
+      "Nachholen von fehlendem Wissen",
+      "Tagesstruktur und Ausbildungsfähigkeit fördern"
+    ],
+    "Gesundheit und Soziales": [
+      "Biologie, Ernährungslehre und Geschichte"
+    ],
+    "Natur und Technik": [
+      "Physik, Chemie und Biologie"
+    ],
+    "Englisch – Globalität und Transkulturalität": [
+      "Englisch und Geografie"
+    ],
+    "Mathematik": [
+      "Mathematik und geometrisches Zeichnen"
+    ],
+    "Deutsch und Kommunikation": [
+      "Deutsch, Kommunikation und Zeitgeschichte"
+    ],
+    "Berufsorientierung": [
+      "Persönlichkeits- und Kompetenzprofil",
+      "Bewerbungstraining und aktive Arbeitssuche",
+      "Arbeitsrecht und österreichische Wirtschaft",
+      "Steuern, Versicherungen und Sozialpartner"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Vormodul: Teilnehmer_innen die das Aufnahmeverfahren nicht bestehen nehmen am Vormodul teil. Teilnahmedauer: richtet sich nach der Anzahl der zu absolvierenden Fächer. Eine Teilnahme ist nach Vereinbarung ab den folgenden Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 548517 V 1",
+      "start": "01.09.2025",
+      "anmerkung": "Info 18.08.2025"
+    },
+    {
+      "kursnummer": "M 548517 V 1",
+      "start": "23.02.2026",
+      "anmerkung": "Info 09.02.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Konrad-Doppelmayer-Straße 13, 6922 Wolfurt",
+    "Konrad-Doppelmayer-Straße 13, 6922 Wolfurt"
+  ],
+  "kontakt": [
+    {
+      "name": "Elena Assumma",
+      "telefon": "+43 664 9118189",
+      "email": "psa-wolfurt@integra.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "Integra Vorarlberg gGmbH",
+    "adresse": "Konrad-Doppelmayr-Straße 13, 6922 Wolfurt"
+  },
+  "quelle": {
+    "dateiname": "Pflichtschulabschluss Unterland_2025-2026.pdf",
+    "ausstellungsdatum": "26.05.2025"
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "pflichtschulabschluss-unterland-lreg"
+}

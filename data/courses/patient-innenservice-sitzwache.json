@@ -1,0 +1,63 @@
+{
+  "titel": "Patient_innenservice & Sitzwache",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Pflege",
+    "Gesundheit",
+    "Krankenhaus"
+  ],
+  "zielgruppe_tags": [
+    "arbeitslos gemeldet"
+  ],
+  "altersgrenze": {
+    "von": 18,
+    "bis": null
+  },
+  "zielgruppe": "Beim AMS Vorarlberg arbeitslos gemeldete Personen mit Interesse an hauswirtschaftlichen Tätigkeiten sowie an delegierbaren Aufgaben des Pflegedienstes im Rahmen der stationären Patient_innenversorgung im Krankenhaus. Voraussetzungen: Vollendung des 18. Lebensjahres, Unbescholtenheit, gute Deutschkenntnisse, Anwenderkenntnisse EDV, Bereitschaft zur Einhaltung der krankenhausspezifischen persönlichen Hygienevorschriften inkl. Grundimmunisierung, Empathie und soziale Eignung, psychische und physische Ausdauer, Bereitschaft zur Wochenend- und Feiertagsarbeit und Bereitschaft zu täglichen Arbeitszeiten von max. 11 Stunden, Zuverlässigkeit und Teamfähigkeit, Erfahrung im Hotel- und Gastgewerbe von Vorteil.",
+  "ziel": "Die Ausbildung vermittelt jene Inhalte und Kompetenzen, die für eine qualitativ hochwertige Tätigkeit im Patient_innenservice im Krankenhaus erforderlich sind.",
+  "inhalt": [
+    "Lebensmittelkunde",
+    "Hygiene- und Desinfektionsaufgaben im patient_innennahen Bereich",
+    "Patient_innendienste, wie z.B. Equipment, Tagesablauf auf Station, Besprechung, Verpflegung, ...",
+    "Bestellung, Lagerhaltung, Logistik",
+    "Aufbereitung medizinischer Gerätschaften",
+    "Arbeitssicherheit",
+    "Kommunikation und Kundenorientierung",
+    "Ernährungslehre",
+    "Patient_innenrechte",
+    "Erste-Hilfe-Kurs (16 Stunden) etc."
+  ],
+  "form_und_dauer": "Theorie und Praktikum ca. 25 Maßnahmenstunden/Woche. Dauer: 21 Wochen (Theorie: 250 Std., Praxis: 275 Std.). Start: 29.06.2026, Ende: 20.11.2026.",
+  "termine": [
+    {
+      "kursnummer": "838416",
+      "start": "29.06.2026",
+      "anmerkung": "Ende 20.11.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Widnau 4, 6800 Feldkirch"
+  ],
+  "kontakt": [
+    {
+      "name": "Linda Nenning",
+      "telefon": "+43 664 88 90 59 04",
+      "email": "linda.nenning@integra.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "BFI der AK Vorarlberg GmbH, in Kooperation mit Zukunftsstiftung Vorarlberg (ZSV)",
+    "adresse": "Widnau 4, 6800 Feldkirch"
+  },
+  "quelle": {
+    "dateiname": "Patien_innenservice.pdf",
+    "ausstellungsdatum": ""
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "patient-innenservice-sitzwache"
+}

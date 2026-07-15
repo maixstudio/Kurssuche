@@ -1,0 +1,45 @@
+{
+  "titel": "MIA - Mein Weg in den Arbeitsmarkt",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Wiedereinstieg",
+    "Frauen",
+    "Vernetzung",
+    "Empowerment"
+  ],
+  "zielgruppe_tags": [
+    "Frauen 40+",
+    "ohne Beschäftigung",
+    "geringfügige Beschäftigung"
+  ],
+  "zielgruppe": "OLF - Frauen 40+. Deutschkenntnisse werden vorausgesetzt, um allen Workshops und Angeboten zu folgen. Bei 3 Terminen ist eine arabische Dolmetscherin vor Ort. 1.) Ohne Beschäftigung und ohne AMS-Vormerkung, oder 2.) Frauen 40+ in geringfügiger Beschäftigung. Teilnahme nicht im Auftrag des AMS.",
+  "ziel": "Teilnehmende Frauen vergrößern ihr Wissen über Wege der individuellen Stärkung, knüpfen tragfähige Netze und Beziehungen für die nächsten Schritte in Richtung Erwerbstätigkeit, lernen die Zusammenhänge zwischen ihrem bisherigen Lebensweg und ihrer Zukunft kennen, finden eine neue Basis für Kommunikation mit Angehörigen über die Organisation des Alltags und die Verteilung von Familienarbeit, erhalten Informationen über aktuelle Anforderungen des lokalen Arbeitsmarkts und Möglichkeiten der beruflichen Bildung (inkl. Finanzierungsmöglichkeiten), und erkennen Zusammenhänge zwischen Geschlechterrollen und ihrer persönlichen Situation.",
+  "inhalt": [
+    "10 MIA-Treffs für Frauen mit Fragen zu Beruf und Arbeit ab 40, davon 3 Termine mit arabischer Dolmetscherin",
+    "3 fixe, fortlaufende MIA-Gruppen mit je 5 Terminen für Frauen OLF ab 40, davon eine Gruppe für Frauen aus dem arabischen Sprachraum und bei Bedarf eine Gruppe für Frauen mit türkischer Muttersprache (bei Bedarf 6. Termin ergänzbar)",
+    "3 fixe, fortlaufende MIA-Gruppen \"kompakt\" mit je 3 Terminen (insb. für Frauen in geringfügiger Beschäftigung)",
+    "2 Vernetzungsfrühstücke \"Erwerbsarbeit\" für Fachpersonen aus dem arbeitsmarkt- und bildungspolitischen Kontext",
+    "1 Event mit mindestens 150 Teilnehmenden",
+    "20 Einzelberatungen \"Mein Termin beim AMS\""
+  ],
+  "form_und_dauer": null,
+  "termine": [],
+  "veranstaltungsort": [],
+  "kontakt": [],
+  "veranstalter": null,
+  "anmeldung_hinweis": null,
+  "quelle": {
+    "dateiname": "MIA - Mein Weg in den Arbeitsmarkt.docx",
+    "ausstellungsdatum": ""
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "id": "mia-mein-weg-in-den-arbeitsmarkt"
+}

@@ -1,0 +1,168 @@
+{
+  "titel": "Clocks – Jeder Mensch tickt anders Unterland",
+  "massnahmentyp": "Training",
+  "regionen": [
+    "Bregenz",
+    "Dornbirn"
+  ],
+  "teilregion": "Unterland",
+  "themen_tags": [
+    "Psychosoziale Stabilisierung",
+    "Jugendliche",
+    "Arbeitsmarktintegration"
+  ],
+  "zielgruppe_tags": [
+    "Vermittlungshindernisse",
+    "psychische Auffälligkeiten",
+    "Suchtproblematik"
+  ],
+  "altersgrenze": {
+    "von": 15,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Bregenz und Dornbirn vorgemerkte Jugendliche ab dem 15. bis zum vollendeten 24. Lebensjahr mit Vermittlungshindernissen (analog Clocks Oberland): psychische Auffälligkeiten, Mobbingerfahrungen, hohe Impulsivität, Aggressivität, Beziehungs- und Bindungsstörungen, Hochrisikoverhalten, Drogen-/Alkoholmissbrauch, Essstörungen, riskantes Beziehungs- und Sexualverhalten, illegales Verhalten, Suizidgedanken, selbstverletzendes Verhalten, unsicheres Selbstbild, Fehlverarbeitung traumatischer Erfahrungen.",
+  "ziel": "Die Teilnehmer_innen für den Arbeitsmarkt vorzubereiten, in den Arbeitsmarkt zu integrieren (Ausbildung oder Arbeitsplatz) sowie die Verbesserung von persönlichen Bewältigungsstrategien zu fördern.",
+  "inhalt": {
+    "Einstieg": [
+      "Alles wichtige über den Kurs erfahren",
+      "Eine bewusste Teilnahme fördern",
+      "Klärung der aktuellen Situation",
+      "Gemeinsam konkrete Ziele festlegen"
+    ],
+    "Aktivierung": [
+      "Kennenlernen und Teambildung",
+      "Standortbestimmung",
+      "Exkursionen und Firmenbesichtigungen",
+      "Klären von Fähigkeiten und Ressourcen"
+    ],
+    "Training": [
+      "Sozial- und Methodenkompetenz",
+      "Selbst- und Persönlichkeitskompetenz",
+      "Bewerbungsunterlagen und Eigeninserat erstellen",
+      "Digitale AMS Angebote kennenlernen"
+    ],
+    "Projekt": [
+      "Gemeinsame Themensuche und Projektumsetzung"
+    ],
+    "Workshops": [
+      "Sucht, Medienkompetenz, Grundlagen der IT"
+    ],
+    "Praktikum": [
+      "Mitarbeit in einem Praxisangebot der AQUA Mühle",
+      "Mitarbeit in einem Kooperationsbetrieb"
+    ],
+    "Abschied": [
+      "Reflexion der vergangenen Monate",
+      "Das erlernte im Alltag umsetzen",
+      "Offene Schritte und weitere Vernetzung"
+    ],
+    "Weitere Bausteine": [
+      "Begleitendes Modul Personalservice",
+      "Nachbetreuung bei Bedarf"
+    ]
+  },
+  "form_und_dauer": "Einzelcoaching: Individuelle Beratung je nach Bedarf, Termine außerhalb der regulären Kurszeiten, gemeinsam vereinbart. Teilnahmedauer: 34 Wochen (inklusive Nachbetreuung). Eine Teilnahme ist nach Absprache ab den angegebenen Terminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 826429 V 1",
+      "start": "22.04.2025",
+      "anmerkung": "Info 07.04.2025"
+    },
+    {
+      "kursnummer": "M 826429 V 2",
+      "start": "16.06.2025",
+      "anmerkung": "Info 02.06.2025"
+    },
+    {
+      "kursnummer": "M 826429 V 3",
+      "start": "15.09.2025",
+      "anmerkung": "Info 01.09.2025"
+    },
+    {
+      "kursnummer": "M 826429 V 4",
+      "start": "09.12.2025",
+      "anmerkung": "Info 24.11.2025"
+    },
+    {
+      "kursnummer": "M 826429 V 5",
+      "start": "02.02.2026",
+      "anmerkung": "Info 19.01.2026"
+    },
+    {
+      "kursnummer": "M 826429 V 6",
+      "start": "13.04.2026",
+      "anmerkung": "Info 30.03.2026"
+    },
+    {
+      "kursnummer": "M 826429 V 7",
+      "start": "06.07.2026",
+      "anmerkung": "Info 22.06.2026"
+    },
+    {
+      "kursnummer": "M 826429 V 8",
+      "start": "14.09.2026",
+      "anmerkung": "Info 31.08.2026"
+    },
+    {
+      "kursnummer": "M 826429 V 9",
+      "start": "30.11.2026",
+      "anmerkung": "Info 16.11.2026"
+    },
+    {
+      "kursnummer": "M 826429 V 10",
+      "start": "01.02.2027",
+      "anmerkung": "Info 18.01.2027"
+    },
+    {
+      "kursnummer": "M 826429 V 11",
+      "start": "12.04.2027",
+      "anmerkung": "Info 30.03.2027"
+    },
+    {
+      "kursnummer": "M 826429 V 12",
+      "start": "28.06.2027",
+      "anmerkung": "Info 14.06.2027"
+    },
+    {
+      "kursnummer": "M 826429 V 13",
+      "start": "06.09.2027",
+      "anmerkung": "Info 23.08.2027"
+    },
+    {
+      "kursnummer": "M 826429 V 14",
+      "start": "06.12.2027",
+      "anmerkung": "Info 22.11.2027"
+    },
+    {
+      "kursnummer": "M 826429 V 15",
+      "start": "03.04.2028",
+      "anmerkung": "Info 20.03.2028"
+    },
+    {
+      "kursnummer": "M 826429 V 16",
+      "start": "15.05.2028",
+      "anmerkung": "Info 02.05.2028"
+    }
+  ],
+  "veranstaltungsort": [
+    "Schlachthausstraße 7c, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "Christian Neyer",
+      "telefon": "+43 5522 5159643",
+      "email": "christian.neyer@aquamuehle.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "AQUA Mühle Vorarlberg gGmbH",
+    "adresse": "Obere Lände 5b, 6820 Frastanz"
+  },
+  "quelle": {
+    "dateiname": "Clocks - Jeder Mensch tickt anders Unterland_2025-2028.pdf",
+    "ausstellungsdatum": "18.02.2025"
+  },
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "clocks-jeder-mensch-tickt-anders-unterland"
+}

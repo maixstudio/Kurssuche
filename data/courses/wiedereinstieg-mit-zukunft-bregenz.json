@@ -1,0 +1,143 @@
+{
+  "titel": "Wiedereinstieg mit Zukunft Bregenz",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Bregenz"
+  ],
+  "themen_tags": [
+    "Wiedereinstieg",
+    "Frauen",
+    "EDV",
+    "Deutsch/Sprache"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen",
+    "Betreuungspflichten"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Bregenz vorgemerkte Frauen mit Unterstützungsbedarf aufgrund von Betreuungspflichten oder anderen Vereinbarkeitsthemen von Familie und Beruf sowie Wiedereinsteigerinnen nach der Elternkarenz.",
+  "ziel": "Die Teilnehmerinnen zu qualifizieren und eine Arbeitsaufnahme mit einem existenzsichernden Einkommen zu fördern.",
+  "inhalt": {
+    "Einstieg": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Testung der Deutschkenntnisse (Qualifizierung 2)",
+      "Eigene Ressourcen erkennen und nutzen",
+      "Persönlichkeitsentwicklung und Zielarbeit",
+      "Unterstützung zum Thema Kinderbetreuung",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsam einen Förderantrag ausfüllen"
+    ],
+    "Berufsorientierung und Perspektivenplanung": [
+      "Zukunftsorientierte und nicht traditionelle Berufe",
+      "Aus- und Weiterbildungen sowie Förderungen",
+      "Vernetzung mit Beratungseinrichtungen für Frauen",
+      "Informationen über die Beratung durch ZeMiT",
+      "Soziale und organisatorische Fähigkeiten",
+      "Lernkompetenz und Lernmethoden",
+      "Kompetenzenbilanzierung und Kompetenzenprofil",
+      "Kommunikation, Rhetorik und Präsentation",
+      "Techniken zur Angst und Stressbewältigung",
+      "Umgang mit Mobbing und Gewaltprävention",
+      "Gleichgewicht zwischen Berufs- und Privatleben",
+      "Ernährungsberatung und Gesundheit",
+      "Bewerbungstraining mit Farb- und Stilberatung",
+      "Bewerbungsunterlagen und Eigeninserat erstellen",
+      "Erarbeiten der nächsten beruflichen Schritte",
+      "Arbeiten mit digitalen AMS Angeboten"
+    ],
+    "Qualifizierung 1: EDV Kompetenz": [
+      "Computer- und Onlinegrundlagen",
+      "Textverarbeitung und Tabellenkalkulation",
+      "Sicherer Umgang mit Sozialen Medien und Apps",
+      "Geld, Konsum und Schulden",
+      "Chancen der Digitalisierung"
+    ],
+    "Qualifizierung 2: Deutsch A1 bis B1": [
+      "hören, lesen, sprechen und schreiben",
+      "Deutsch in Alltags- und Arbeitssituationen",
+      "Einführung in die deutsche Grammatik"
+    ],
+    "Fempower": [
+      "Digitale Welt: Frauen und Digitalisierung",
+      "Fokus Finanzen: Frauen und Geld",
+      "Gesund und Fit: Frauen und Gesundheit"
+    ],
+    "Weitere Bausteine": [
+      "Workshops und Gruppenarbeiten zu verschiedenen Themen."
+    ]
+  },
+  "form_und_dauer": "Teilnahmedauer Qualifizierung 1: 14 Wochen, inklusive 2 Wochen Praktikum. Teilnahmedauer Qualifizierung 2: 13 Wochen. Einzelcoaching: Individuelle Beratung je nach Bedarf der Teilnehmerin, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Eine Teilnahme ist nach Vereinbarung ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 826795 V 2",
+      "start": "07.04.2025",
+      "anmerkung": "EDV Kompetenz"
+    },
+    {
+      "kursnummer": "M 826795 V 3",
+      "start": "05.05.2025",
+      "anmerkung": "Deutsch A1 bis B1"
+    },
+    {
+      "kursnummer": "M 826795 V 4",
+      "start": "02.06.2025",
+      "anmerkung": "EDV Kompetenz"
+    },
+    {
+      "kursnummer": "M 826795 V 5",
+      "start": "22.09.2025",
+      "anmerkung": "Deutsch A1 bis B1"
+    },
+    {
+      "kursnummer": "M 826795 V 6",
+      "start": "06.10.2025",
+      "anmerkung": "EDV Kompetenz"
+    },
+    {
+      "kursnummer": "M 826795 V 7",
+      "start": "10.11.2025",
+      "anmerkung": "Deutsch A1 bis B1"
+    },
+    {
+      "kursnummer": "M 826795 V 8",
+      "start": "09.12.2025",
+      "anmerkung": "EDV Kompetenz"
+    },
+    {
+      "kursnummer": "M 826795 V 9",
+      "start": "12.01.2026",
+      "anmerkung": "Deutsch A1 bis B1"
+    },
+    {
+      "kursnummer": "M 826795 V 10",
+      "start": "16.02.2026",
+      "anmerkung": "EDV Kompetenz"
+    }
+  ],
+  "veranstaltungsort": [
+    "Wolfeggstraße 11, 6900 Bregenz"
+  ],
+  "kontakt": [
+    {
+      "name": null,
+      "telefon": "+43 676 3862290",
+      "email": "office@donna.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Wiedereinstieg mit Zukunft Bregenz_2025.pdf",
+    "ausstellungsdatum": "07.11.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "wiedereinstieg-mit-zukunft-bregenz"
+}

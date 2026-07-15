@@ -1,0 +1,85 @@
+{
+  "titel": "Informationsseminar Wiedereinstieg Dornbirn",
+  "massnahmentyp": "Bildungsmaßnahme - Orientierung",
+  "regionen": [
+    "Dornbirn"
+  ],
+  "themen_tags": [
+    "Wiedereinstieg",
+    "Frauen",
+    "Vereinbarkeit Familie und Beruf"
+  ],
+  "zielgruppe_tags": [
+    "Frauen",
+    "Wiedereinsteigerinnen",
+    "Betreuungspflichten"
+  ],
+  "zielgruppe": "Beim Arbeitsmarktservice Dornbirn vorgemerkte Frauen mit Unterstützungsbedarf aufgrund von Betreuungspflichten oder anderen Vereinbarkeitsthemen von Familie und Beruf, sowie Wiedereinsteigerinnen nach der Elternkarenz.",
+  "ziel": "Die Teilnehmerinnen durch Informationen und Orientierung zu einer aktiven Gestaltung des beruflichen Wiedereinstieges zu motivieren, damit ein (existenzsicherndes) Einkommen erzielt werden kann.",
+  "inhalt": [
+    "Berufe mit Zukunft und Trends am Arbeitsmarkt",
+    "Berufskunde und regionaler Arbeitsmarkt",
+    "Arbeitsrecht, Arbeitsverträge und Gehaltsverhandlungen",
+    "Mit den eigenen Fähigkeiten und Interessen arbeiten",
+    "Kinderbetreuung in Vorarlberg",
+    "Beihilfen und Weiterbildungsangebote",
+    "Schritte auf dem Weg ins Berufsleben",
+    "Anforderungen und Erwartungen an eine neue Mitarbeiterinnen",
+    "Bewerbungsvorbereitung und Unterstützung bei der Arbeitssuche",
+    "Outfit und Auftritt - Styling Tipps für den Beruf",
+    "Empowerment - Beispiele von Frauen die es geschafft haben",
+    "Gleichgewicht zwischen Berufs- und Privatleben",
+    "Stressmanagement und Stressbewältigung",
+    "Selbstbewusst am Arbeitsplatz",
+    "Multikulturelle Arbeitswelt"
+  ],
+  "form_und_dauer": "Teilnahmedauer: 1 Woche. Einzelcoaching: Individuelle Beratung je nach Bedarf der Teilnehmerinnen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart. Eine Teilnahme ist nach Absprache ab den folgenden Startterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 838500 V 1",
+      "start": "23.03.2026"
+    },
+    {
+      "kursnummer": "M 838500 V 2",
+      "start": "20.04.2026"
+    },
+    {
+      "kursnummer": "M 838500 V 3",
+      "start": "14.09.2026"
+    },
+    {
+      "kursnummer": "M 838500 V 4",
+      "start": "23.11.2026"
+    },
+    {
+      "kursnummer": "M 838500 V 5",
+      "start": "18.01.2027"
+    }
+  ],
+  "veranstaltungsort": [
+    "Am Kehlerpark 3, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": null,
+      "telefon": "+43 676 3862290",
+      "email": "office@donna.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "donna beratung.bildung GmbH",
+    "adresse": "Am Kehlerpark 3-5, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "Informationsseminar Wiedereinstieg Dornbirn_2026.pdf",
+    "ausstellungsdatum": "14.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "altersgrenze": {
+    "von": null,
+    "bis": null
+  },
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "informationsseminar-wiedereinstieg-dornbirn"
+}

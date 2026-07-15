@@ -1,0 +1,132 @@
+{
+  "titel": "AZV - Ausbildungszentrum Vorarlberg (ÜBN1)",
+  "massnahmentyp": "Qualifizierung",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "Lehrausbildung",
+    "Berufsorientierung",
+    "Handwerk/Technik",
+    "Gastronomie",
+    "Handel"
+  ],
+  "zielgruppe_tags": [
+    "Lehrstellensuchende",
+    "abgebrochene Lehre"
+  ],
+  "altersgrenze": {
+    "von": 15,
+    "bis": 25
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Lehrstellensuchende zwischen 15 und 25 Jahren mit abgeschlossener Schulpflicht, die keine Lehrstelle finden können oder eine betriebliche Lehre abgebrochen haben (auch für Sonderschulabsolvent_innen).",
+  "ziel": "Die Berufsschule regelmäßig zu besuchen und eine erfolgreiche Lehrabschlussprüfung im jeweiligen Lehrberuf zu absolvieren.",
+  "inhalt": {
+    "Vormodul Perspektive Lehre": [
+      "Schulische Förderung",
+      "Sozialkompetenztraining",
+      "Berufsorientierung",
+      "Förderung von Alltagskompetenzen",
+      "Individuelle Begleitung und Unterstützung",
+      "Vorbereitung auf den Lehreinstieg"
+    ],
+    "Lehrberufe": [
+      "Betriebslogistik",
+      "Bürokauffrau (nur Frauen)",
+      "Elektrotechnik",
+      "Fahrradmechatronik (nur Frauen)",
+      "Gastronomie (Aqua Mühle)",
+      "Handel (nur Frauen)",
+      "Holz",
+      "Installations- und Gebäudetechnik",
+      "Malen",
+      "Metall"
+    ]
+  },
+  "form_und_dauer": "Die Aufnahme erfolgt nach einem Auswahlgespräch bzw. nach einem Praktikum. Bei Bedarf Teilnahme am Vormodul Perspektive Lehre. Verpflichtender regelmäßiger Besuch der Berufsschule. Die Lehrberufe Büro, Fahrradmechatronik und Handel stehen ausschließlich weiblichen Teilnehmerinnen zur Verfügung. Die Ausbildungsdauer richtet sich nach den gesetzlichen Bestimmungen des jeweiligen Lehrberufes.",
+  "termine": [
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "20.10.2025",
+      "anmerkung": "Orientierung und Erprobung, Info 03.10.2025"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "01.12.2025",
+      "anmerkung": "Orientierung und Erprobung, Info 14.11.2025"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "09.02.2026",
+      "anmerkung": "Orientierung und Erprobung, Info 23.01.2026"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "13.04.2026",
+      "anmerkung": "Orientierung und Erprobung, Info 27.03.2026"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "29.06.2026",
+      "anmerkung": "Orientierung und Erprobung, Info 12.06.2026"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "14.09.2026",
+      "anmerkung": "Orientierung und Erprobung, Info 03.07.2026"
+    },
+    {
+      "kursnummer": "M 521758 V 1",
+      "start": "14.09.2026",
+      "anmerkung": "Orientierung und Erprobung, Info 28.08.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Hejomahd 2, 6845 Hohenems",
+    "Diepoldsauerstrasse 41, 6845 Hohenems"
+  ],
+  "kontakt": [
+    {
+      "name": "Nicole Dietrich",
+      "telefon": "+43 664 88714831",
+      "email": "nicole.dietrich@azv.at",
+      "bereich": "Orientierung und Erprobung; Betriebslogistik, Elektrotechnik, Installations- und Gebäudetechnik"
+    },
+    {
+      "name": "Christine Hummer",
+      "telefon": "+43 664 8395981",
+      "email": "christine.hummer@azv.at",
+      "bereich": "Fahrradmechatronik, Holz, Malen"
+    },
+    {
+      "name": "Tanja Kovar",
+      "telefon": "+43 664 2822306",
+      "email": "tanja.kovar@azv.at",
+      "bereich": "Büro, Metall"
+    },
+    {
+      "name": "Lisa Isopp",
+      "telefon": "+43 664 8395964",
+      "email": "lisa.isopp@azv.at",
+      "bereich": "Einzelhandel, Metall"
+    },
+    {
+      "name": "Nicola Lins",
+      "telefon": "+43 699 15159623",
+      "email": "nicola.lins@aquamuehle.com",
+      "bereich": "Gastronomie"
+    }
+  ],
+  "veranstalter": {
+    "name": "Ausbildungszentrum Vorarlberg (AZV)",
+    "adresse": "Hejomahd 2, 6845 Hohenems"
+  },
+  "quelle": {
+    "dateiname": "AZV - Ausbildungszentrum Vorarlberg (ÜBN1)_2025-2026.pdf",
+    "ausstellungsdatum": "03.12.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "azv-ausbildungszentrum-vorarlberg-uebn1"
+}

@@ -1,0 +1,69 @@
+{
+  "titel": "Zukunftsstiftung Vorarlberg",
+  "massnahmentyp": "Sonstiges",
+  "regionen": [
+    "Vorarlberg-weit"
+  ],
+  "themen_tags": [
+    "MINT",
+    "Mangelberufe",
+    "Höherqualifizierung",
+    "Stiftung"
+  ],
+  "zielgruppe_tags": [],
+  "altersgrenze": {
+    "von": 18,
+    "bis": null
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Vorarlberg vorgemerkte Personen ab 18 Jahren mit mindestens Pflichtschulabschluss, die Interesse an einer Aus- oder Weiterbildung schwerpunktmäßig in MINT Berufen, Berufen laut Mangelberufsliste oder Höherqualifizierung auf ein höheres Qualifikationsniveau haben und ein Beschäftigungsverhältnis im Ausbildungsbetrieb anstreben. Unternehmen mit Sitz in Vorarlberg, mit einem Mangel an ausreichend qualifiziertem Personal, die bereit sind die Teilnehmer_innen zu fördern und auszubilden.",
+  "ziel": "Die Teilnehmer_innen bei einer Ausbildung oder einer Höherqualifizierung zu unterstützen und eine nachhaltige Integration in den Arbeitsmarkt zu fördern. Unternehmen erhalten die Möglichkeit, gesuchte Fachkräfte gezielt für ihre Bedürfnisse auszubilden.",
+  "inhalt": {
+    "Vorphase": [
+      "Erstgespräch und Beratung",
+      "Rahmenbedingungen und Fördervoraussetzungen"
+    ],
+    "Orientierung": [
+      "Erarbeitung eines realistischen Ausbildungsziels",
+      "Potentialanalyse und Kompetenzcheck",
+      "Planung von vorübergehenden Vorbereitungs- und/oder alternativ Maßnahmen"
+    ],
+    "Ausbildungsplatz und Bildungsplan": [
+      "Suche eines geeigneten Ausbildungsbetriebes",
+      "Erstellen eines individuellen Bildungsplans in Kooperation mit dem Ausbildungsbetrieb",
+      "Genehmigung des Bildungsplans durch das AMS",
+      "Vorbereitung auf den Stiftungseintritt"
+    ],
+    "Stiftungseintritt": [
+      "Praxisqualifizierung durch den Ausbildungsbetrieb",
+      "Umsetzung des Bildungsplans",
+      "Übernahme in ein Dienstverhältnis"
+    ]
+  },
+  "form_und_dauer": "Zeitraum: 01.01.2026 bis 31.12.2029. Teilnahmedauer: Maximal 36 Monate. Eintritte sind bis zum 31.12.2026 möglich. Monatliches Stipendium: € 100,- bei einer Dauer kürzer als 6 Monate, € 200,- bei einer Dauer länger als 6 Monate, € 400,- bei einer Dauer länger als 6 Monate und einer Lehrabschlussprüfung. Unternehmenskosten: € 440,- pro Monat, € 640,- pro Monat bei einer Lehrabschlussprüfung. Ausbildungskosten die € 7.000,- übersteigen werden vom Land Vorarlberg und AMS übernommen.",
+  "termine": [
+    {
+      "kursnummer": "M 838416 V 1"
+    }
+  ],
+  "kontakt": [
+    {
+      "name": "Bettina Strobl",
+      "telefon": "+43 664 88917303",
+      "email": "bettina.strobl@integra.or.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "Integra Vorarlberg gGmbH",
+    "telefon": "+43 5574 54254",
+    "email": "zukunftsstiftung@integra.or.at"
+  },
+  "quelle": {
+    "dateiname": "Zukunftsstiftung Vorarlberg_2026.pdf",
+    "ausstellungsdatum": "15.01.2026"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "veranstaltungsort": [],
+  "id": "zukunftsstiftung-vorarlberg"
+}

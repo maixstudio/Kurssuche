@@ -1,0 +1,105 @@
+{
+  "titel": "Praktische Berufsorientierung Jugendliche Dornbirn",
+  "massnahmentyp": "Orientierung",
+  "regionen": [
+    "Dornbirn"
+  ],
+  "themen_tags": [
+    "Berufsorientierung",
+    "Jugendliche",
+    "Lehrausbildung"
+  ],
+  "zielgruppe_tags": [
+    "ohne Praktikumsplatz",
+    "abgebrochene Lehre"
+  ],
+  "altersgrenze": {
+    "von": null,
+    "bis": 24
+  },
+  "zielgruppe": "Beim Arbeitsmarktservice Dornbirn vorgemerkte Personen im Alter von bis zu 24 Jahren oder jünger mit abgeschlossener oder abgebrochener Pflichtschule oder einer abgebrochenen Lehrausbildung und dem Wunsch eine Lehrausbildung zu absolvieren.",
+  "ziel": "Die Teilnehmer_innen durch betriebliche Praktika beruflich zu orientieren und deren Eignung für eine Lehrausbildung im angestrebten Bereich zu überprüfen und infolgedessen die passende Ausbildungsform (insbesondere Lehrstelle) zu finden.",
+  "inhalt": {
+    "Informationsmodul": [
+      "Alles Wichtige über den Kurs erfahren",
+      "Informationen über benötigte Unterlagen",
+      "Überprüfung von Deutsch- und Mathekenntnissen",
+      "MeinAMS kennenlernen und ausprobieren",
+      "Gemeinsames Ausfüllen eines Förderantrages",
+      "Informationen zum Thema Kinderbetreuung"
+    ],
+    "Berufsorientierung und Bewerbungstraining": [
+      "Reflexion von Berufs- und Bildungserfahrungen",
+      "Die eigenen Fähigkeiten erkennen und stärken",
+      "Bewerbungsunterlagen und Bewerbungstraining",
+      "Berufskunde und Analyse des Stellenmarktes",
+      "Trends und Tendenzen am Arbeitsmarkt",
+      "Realistische Berufsbilder und benötigte Qualifikationen",
+      "Anforderungen und Erwartungen von Unternehmen",
+      "Praktikums- Ausbildungs- und Arbeitsplatzsuche"
+    ],
+    "Praktikum und Arbeitserprobung": [
+      "Einen ersten Einblick in die Tätigkeiten erlangen",
+      "Überprüfung der persönlichen Eignung",
+      "Festigung des Berufswunsches"
+    ],
+    "Kompetenzzentrum": [
+      "Fortgeschrittene Bewerbungsunterstützung",
+      "Bildungs- und Karriereplanung",
+      "Netzwerkcoaching und verdeckter Stellenmarkt",
+      "Zielorientierte Beratung zur Realisierung des Ausbildungswunsches"
+    ],
+    "Einzelcoaching": [
+      "Individuelle Beratung je nach Bedarf der Teilnehmer_innen, die Termine finden außerhalb der regulären Kurszeiten statt und werden gemeinsam vereinbart"
+    ]
+  },
+  "form_und_dauer": "Die Teilnehmer_innen die keinen Praktikumsplatz gefunden haben nehmen am Kompetenzzentrum teil. Teilnahmedauer: 8 Wochen (laufender Einstieg). Eine Teilnahme ist nach Vereinbarung ab den folgenden Einstiegsterminen möglich.",
+  "termine": [
+    {
+      "kursnummer": "M 826979 V 2",
+      "start": "10.06.2025"
+    },
+    {
+      "kursnummer": "M 826979 V 3",
+      "start": "04.08.2025"
+    },
+    {
+      "kursnummer": "M 826979 V 4",
+      "start": "29.09.2025"
+    },
+    {
+      "kursnummer": "M 826979 V 5",
+      "start": "24.11.2025"
+    },
+    {
+      "kursnummer": "M 826979 V 6",
+      "start": "02.02.2026"
+    },
+    {
+      "kursnummer": "M 826979 V 7",
+      "start": "30.03.2026"
+    }
+  ],
+  "veranstaltungsort": [
+    "Langegasse 31, 6850 Dornbirn"
+  ],
+  "kontakt": [
+    {
+      "name": "FAB Administration",
+      "telefon": "+43 5572 210014",
+      "email": "kurse@fab.at"
+    }
+  ],
+  "veranstalter": {
+    "name": "FAB Verein zur Förderung von Arbeit & Beschäftigung",
+    "adresse": "Langegasse 31, 6850 Dornbirn"
+  },
+  "quelle": {
+    "dateiname": "PBO Jugendliche Dornbirn 2025.pdf",
+    "ausstellungsdatum": "07.11.2025"
+  },
+  "teilregion": null,
+  "sprachniveau": null,
+  "anmeldung_hinweis": "Bitte sprechen Sie mit Ihrer AMS Beraterin/Ihrem AMS Berater über die Teilnahmemöglichkeit an dieser Veranstaltung.",
+  "id": "praktische-berufsorientierung-jugendliche-dornbirn"
+}
