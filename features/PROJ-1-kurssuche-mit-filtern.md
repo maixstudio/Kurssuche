@@ -55,7 +55,9 @@
 
 ## Open Questions
 - [ ] Wie soll mit Duplikaten umgegangen werden (z. B. die drei "KIT"-Einträge, die denselben Kurs beschreiben)? Aktuell werden sie als separate Kurse angezeigt — ggf. später in PROJ-2/Datenpflege bereinigen.
-- [ ] Genauer Ordnerstruktur-Vertrag zwischen JSON-Ordner und PDF-Ordner (z. B. müssen sie Geschwisterordner sein?) — wird in `/architecture` festgelegt.
+- [ ] Funktioniert der Ordner-Auswahldialog zuverlässig, wenn die App per Doppelklick (statt über `http://`) geöffnet wird? Siehe "Bekanntes technisches Risiko" im Tech Design — wird bei `/frontend` als Erstes getestet.
+
+**Geklärt in `/architecture`:** JSON-Ordner und PDF-Ordner sind Geschwisterordner (liegen nebeneinander im selben übergeordneten SharePoint-Ordner); der PDF-Link in der Kurskarte wird über den relativen Pfad `../<pdf-ordner-name>/<quelle.dateiname>` aufgelöst.
 
 ## Decision Log
 
@@ -74,12 +76,87 @@
 <!-- Added by /architecture -->
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Next.js als statischer Export (kein Server, kein Vercel) | App wird einmalig gebaut und liegt als eigenständige HTML/JS-Datei im selben geteilten SharePoint-Ordner wie JSON- und PDF-Ordner — kein Internetzugang, kein Hosting nötig | 2026-07-15 |
+| Ordnerzugriff über die native File System Access API (Browser-Funktion, kein npm-Paket) | Kein zusätzliches Paket nötig; die API erlaubt direktes Lesen des ausgewählten Ordners und merkt sich die Berechtigung selbstständig zwischen Sitzungen | 2026-07-15 |
+| Kein State-Management-Paket (React `useState`/`useReducer` reicht) | Datenmenge (aktuell 48, absehbar niedrige Hundert Kurse) und Komplexität rechtfertigen keine zusätzliche Bibliothek | 2026-07-15 |
+| Bestehende shadcn/ui-Komponenten wiederverwenden (Card, Checkbox, Badge, Button, Accordion) | Bereits im Template installiert, deckt Filterleiste und Kurskarten vollständig ab, keine neuen Abhängigkeiten nötig | 2026-07-15 |
 
 ---
 <!-- Sections below are added by subsequent skills -->
 
 ## Tech Design (Solution Architect)
-_To be added by /architecture_
+
+### A) Component Structure
+
+```
+Kurssuche-Seite (/)
+├── Header
+│   └── Titel "Kurssuche" + kurzer Hinweistext
+├── Datenbereich
+│   ├── "Alle Kurse laden"-Button
+│   │     (sichtbar, wenn noch kein Ordner gewählt wurde oder die Berechtigung abgelaufen ist)
+│   └── Status-Hinweis
+│         ("48 Kurse geladen" / "2 Datei(en) konnten nicht geladen werden")
+├── Filterleiste (mehrere Kategorien, jede mit an-/abschaltbaren Tags)
+│   ├── Maßnahmentyp (Orientierung, Qualifizierung, Training, ...)
+│   ├── Region (Bludenz, Bregenz, Dornbirn, Feldkirch, Vorarlberg-weit)
+│   ├── Themen-Tags (Pflege, IT, Deutsch/Sprache, ...)
+│   └── Zielgruppen-Tags (Frauen, Jugendliche, Wiedereinsteigerinnen, ...)
+├── Ergebnisliste
+│   ├── Kurs-Karte (eingeklappt: Titel, Maßnahmentyp, Region(en), nächste Starttermine)
+│   │     └── Aufgeklappter Zustand: Zielgruppe, Ziel, Inhalt, Form & Dauer,
+│   │         alle Termine, Veranstaltungsort, Kontakt, Veranstalter, Link zum Original-PDF
+│   └── Leerer-Zustand-Hinweis ("Keine Kurse gefunden" bei zu enger Filterkombination)
+```
+
+### B) Data Model (plain language)
+
+Es gibt keine Datenbank. Die App liest bei jedem Start (bzw. beim Klick auf
+"Alle Kurse laden") alle JSON-Dateien aus dem vom Nutzer ausgewählten Ordner
+direkt im Browser ein — das Schema der einzelnen Kurs-Dateien ist bereits in
+`docs/tag-taxonomy.md` festgelegt (Titel, Maßnahmentyp, Regionen, Tags,
+Zielgruppe, Ziel, Inhalt, Termine, Kontakt, Veranstalter, Quelle).
+
+Im Speicher der App (nur während die Seite offen ist) werden gehalten:
+- Die Liste aller erfolgreich eingelesenen Kurse
+- Eine Liste der Dateien, die nicht eingelesen werden konnten (für den Fehlerhinweis)
+- Die aktuell aktivierten Filter (welche Tags/Regionen/Maßnahmentypen an sind)
+
+Die Berechtigung für den ausgewählten Ordner wird vom Browser selbst
+gespeichert (nicht von der App) — deshalb muss man den Ordner nur beim
+allerersten Mal auswählen.
+
+### C) Tech Decisions (plain language)
+
+- **Kein eigener Server, kein Hosting:** Die App wird einmal gebaut und liegt
+  danach als fertige Datei direkt im geteilten SharePoint-Ordner neben den
+  JSON- und PDF-Ordnern. Das passt zur Anforderung "kein Internet nötig,
+  läuft komplett lokal/im Firmennetz".
+- **Ordnerzugriff über eine Browser-Standardfunktion:** Es wird keine externe
+  Bibliothek für das Lesen der Dateien gebraucht — Microsoft Edge bringt das
+  bereits mit.
+- **Keine zusätzliche Bibliothek fürs Verwalten des App-Zustands:** Bei der
+  aktuellen und absehbaren Datenmenge (Kurse, Filter) reicht das, was React
+  von Haus aus mitbringt.
+- **Bestehende Bausteine wiederverwenden:** Karten, Checkboxen, Buttons gibt
+  es im Template schon fertig (shadcn/ui) — es müssen keine neuen
+  UI-Bausteine installiert werden.
+
+### D) Dependencies
+
+Keine neuen Pakete nötig — alles Erforderliche (Next.js, React, Tailwind,
+shadcn/ui-Komponenten) ist im Projekt bereits installiert.
+
+### Bekanntes technisches Risiko
+
+Der Ordner-Auswahldialog (File System Access API) setzt normalerweise eine
+"sichere" Browser-Umgebung voraus. Bei einer Datei, die direkt per
+Doppelklick vom Ordner geöffnet wird (statt über eine Adresse `http://`),
+kann es browserabhängig zu Einschränkungen kommen. Das wird beim Bauen der
+UI (`/frontend`) als Erstes getestet — falls es nicht zuverlässig
+funktioniert, ist als Fallback ein winziger lokaler Startmechanismus nötig
+(z. B. eine Verknüpfung, die die Seite über `http://localhost` statt direkt
+per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
 
 ## QA Test Results
 _To be added by /qa_
