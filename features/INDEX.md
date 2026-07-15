@@ -15,7 +15,11 @@
 
 | ID | Feature | Status | Spec | Created |
 |----|---------|--------|------|---------|
+| PROJ-1 | Kurssuche mit Filtern | Roadmap | - | 2026-07-15 |
+| PROJ-2 | Kurs-Erfassung (PDF-Import) | Roadmap | - | 2026-07-15 |
+| PROJ-3 | Kurs-Detailansicht | Roadmap | - | 2026-07-15 |
+| PROJ-4 | Mehrbenutzer-Sync (später) | Roadmap | - | 2026-07-15 |
 
 <!-- Add features above this line -->
 
-## Next Available ID: PROJ-1
+## Next Available ID: PROJ-5
