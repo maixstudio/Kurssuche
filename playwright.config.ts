@@ -11,8 +11,17 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'Mobile Safari', use: { ...devices['iPhone 13'] } },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'], launchOptions: { executablePath: '/opt/pw-browsers/chromium' } },
+    },
+    {
+      // PROJ-1 targets Microsoft Edge (Chromium-based) only — mobile Chrome
+      // emulation stands in for a small viewport since no WebKit browser is
+      // available in this environment (see .claude/rules general note in QA).
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 7'], launchOptions: { executablePath: '/opt/pw-browsers/chromium' } },
+    },
   ],
   webServer: {
     command: 'npm run dev',

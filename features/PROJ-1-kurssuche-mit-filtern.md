@@ -1,6 +1,6 @@
 # PROJ-1: Kurssuche mit Filtern
 
-## Status: In Progress
+## Status: In Review
 **Created:** 2026-07-15
 **Last Updated:** 2026-07-15
 
@@ -178,7 +178,101 @@ per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
 **Abweichungen vom Tech Design:** Keine.
 
 ## QA Test Results
-_To be added by /qa_
+
+**Tested:** 2026-07-15
+**App URL:** http://localhost:3000 (statischer Export, kein Server im Zielbetrieb)
+**Tester:** QA Engineer (AI)
+
+### Hinweis zur Testmethode
+Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-Dialog außerhalb der Seite und kann von keinem Test-Tool automatisiert werden. Für alle Tests, die einen ausgewählten Ordner voraussetzen, wurden `showDirectoryPicker` und `indexedDB` im Browser durch kontrollierte Fake-Objekte ersetzt (siehe `tests/PROJ-1-kurssuche-mit-filtern.spec.ts`) — die eigentliche App-Logik (Einlesen, Filtern, Rendern, Persistenz-Aufruf) läuft dabei unverändert und echt. Der Dialog selbst und sein Verhalten bei `file://`-Aufruf (siehe „Bekanntes technisches Risiko" im Tech Design) bleiben ungetestet und müssen im Zielumfeld (Edge, SharePoint-Ordner) verifiziert werden.
+
+### Acceptance Criteria Status
+
+#### AC-1: Erstmaliges Laden über "Alle Kurse laden"
+- [x] Klick lädt alle gültigen JSON-Dateien und zeigt sie als Liste
+
+#### AC-2: Automatisches Laden bei bereits erteilter Berechtigung
+- [x] Nach Reload mit simulierter bestehender Berechtigung werden Kurse ohne erneuten Klick geladen
+
+#### AC-3: Button erscheint wieder bei abgelaufener/widerrufener Berechtigung
+- [ ] BUG: Nicht automatisiert testbar (siehe Testmethode-Hinweis) — Logik im Code vorhanden (`hasReadPermission` false → Status „needs-permission"), aber ungetestet, da eine echte Widerrufung nicht simulierbar ist
+
+#### AC-4: Alphabetische Sortierung ohne aktiven Filter
+- [x] Kurse erscheinen in korrekter alphabetischer Reihenfolge
+
+#### AC-5/AC-6: Filterlogik (ODER innerhalb Kategorie, UND zwischen Kategorien)
+- [x] Zwei aktive Themen-Tags zeigen Kurse mit mindestens einem der Tags
+- [x] Region + Themen-Tag kombiniert zeigt nur Kurse, die beides erfüllen
+
+#### AC-7: Hinweis bei keiner Trefferkombination
+- [x] "Keine Kurse gefunden" erscheint bei zu enger Filterkombination
+
+#### AC-8/AC-9: Aufklappen zeigt Details + PDF-Link
+- [x] Aufgeklappte Karte zeigt Zielgruppe, Ziel, Inhalt, Form & Dauer, Termine, Ort, Kontakt, Veranstalter
+- [x] PDF-Link öffnet die korrekte Datei in neuem Tab (`blob:`-URL, `noopener,noreferrer`)
+
+#### AC-10: Fehlerhafte JSON-Datei wird übersprungen
+- [x] Kaputte Datei erscheint im Hinweistext, übrige Kurse laden trotzdem
+
+#### AC-11: Fehlende Felder als "keine Angabe"
+- [x] Kurs mit fehlenden Detailfeldern zeigt "keine Angabe" statt Fehler/Absturz
+
+#### AC-12: Kurs ohne Region bei Regionsfilter ausgeblendet
+- [x] Kurs ohne `regionen` verschwindet bei aktivem Regionsfilter, ist ohne Filter sichtbar
+
+### Edge Cases Status
+
+#### EC-1: Ordnerauswahl abgebrochen
+- [x] Code behandelt `AbortError` explizit (kein Fehlerzustand) — durch Code-Review verifiziert, nicht separat automatisiert getestet
+
+#### EC-2: Ordner ohne JSON-Dateien
+- [ ] BUG-1 (siehe unten) — falsche/irreführende Meldung
+
+#### EC-3: Verlinktes PDF fehlt im PDF-Ordner
+- [x] Zeigt Inline-Fehlermeldung "PDF „…" nicht gefunden" statt totem Link
+
+#### EC-4: Kurs mit sehr vielen Terminen
+- [x] Durch Code-Review verifiziert — Terminliste rendert alle Einträge ohne Abschneiden (keine `.slice()`/Limit im Code)
+
+#### EC-5: Nicht unterstützter Browser
+- [x] Eigener Hinweistext bei fehlender File-System-Access-API-Unterstützung (Code-Review, da Testumgebung selbst Chromium ist)
+
+### Security Audit Results
+- [x] Keine Server-/API-Angriffsfläche — statischer Export ohne `src/app/api/`-Routen
+- [x] Kein `dangerouslySetInnerHTML`, kein `eval`/`new Function` im neuen Code
+- [x] Kein Zugriff auf `process.env`/Secrets im neuen Code (nur unbenutzter Alt-Code in `src/lib/supabase.ts`, nicht Teil dieser Feature)
+- [x] `window.open` für PDF-Blob-URLs mit `noopener,noreferrer` (verhindert Tabnabbing)
+- [x] Ordnerzugriff ist durch die Browser-Sandbox der File System Access API auf den explizit gewählten Ordner beschränkt
+- [x] Kursdaten werden als React-Text gerendert (automatisches Escaping) — kein XSS-Vektor über Kursinhalte erkennbar
+
+### Bugs Found
+
+#### BUG-1: Irreführende Meldung bei leerem/falschem Datenordner
+- **Severity:** Medium
+- **Steps to Reproduce:**
+  1. "Alle Kurse laden" klicken und einen Ordner ohne passende JSON-Dateien auswählen
+  2. Erwartet (laut Spec-Edge-Case): Hinweistext "Keine Kursdaten in diesem Ordner gefunden" mit Möglichkeit, den Ordner erneut zu wählen
+  3. Tatsächlich: Es erscheint dieselbe generische Meldung wie bei einer zu engen Filterkombination ("Keine Kurse gefunden. Passe die Filterauswahl an.") — irreführend, da keine Filter aktiv sein müssen, und es keinen Weg zurück zum Ordner-Auswahl-Button gibt
+- **Priority:** Fix before deployment
+
+#### BUG-2: Geöffnete PDF-Blob-URLs werden nie freigegeben
+- **Severity:** Low
+- **Steps to Reproduce:**
+  1. Mehrmals "Original-PDF öffnen" bei verschiedenen Kursen klicken
+  2. Erwartet: Nicht mehr benötigte `blob:`-URLs werden freigegeben (`URL.revokeObjectURL`)
+  3. Tatsächlich: URLs werden nie revoked — bei sehr vielen geöffneten PDFs in einer Sitzung steigt der Speicherverbrauch geringfügig
+- **Priority:** Nice to have
+
+### Summary
+- **Acceptance Criteria:** 11/12 automatisiert bestätigt, 1 durch Code-Review (AC-3, mangels Testbarkeit des echten Berechtigungswiderrufs)
+- **Bugs Found:** 2 total (0 critical, 0 high, 1 medium, 1 low)
+- **Security:** Pass — keine Befunde
+- **Production Ready:** NEIN (BUG-1 sollte vor dem ersten echten Einsatz behoben werden, ist aber kein blockierender/kritischer Fehler)
+- **Recommendation:** BUG-1 in einem weiteren `/frontend`-Durchgang beheben (Ordner-leer-Zustand von Filter-leer-Zustand unterscheiden), BUG-2 optional. Danach erneut `/qa` laufen lassen.
+
+**Automatisierte Tests:**
+- Unit-Tests (Vitest): `src/components/kurssuche/filter-panel.test.ts`, `src/lib/course-loader.test.ts` — 13/13 bestanden
+- E2E-Tests (Playwright): `tests/PROJ-1-kurssuche-mit-filtern.spec.ts` — 9 Szenarien × 2 Projekte (Chromium Desktop + Mobile Chrome) = 18/18 bestanden
 
 ## Deployment
 _To be added by /deploy_
