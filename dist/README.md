@@ -20,12 +20,16 @@ Kein Node.js, kein npm, keine Installation auf deiner Seite erforderlich.
    ```
 
 2. `index.html` per Doppelklick in **Microsoft Edge** öffnen.
-3. Auf "Alle Kurse laden" klicken und den übergeordneten Ordner auswählen
-   (den, der `courses/` und `source-pdfs/` enthält — nicht einen der beiden
-   Unterordner selbst).
+3. Auf "Alle Kurse laden" klicken und im Auswahl-Dialog den
+   **übergeordneten Ordner** auswählen (den, der `courses/` und
+   `source-pdfs/` enthält — nicht einen der beiden Unterordner selbst).
 
-Danach merkt sich der Browser die Freigabe — beim nächsten Öffnen von
-`index.html` werden die Kurse automatisch geladen.
+Anders als in einer früheren Version merkt sich der Browser den Ordner
+**nicht** mehr automatisch — beim erneuten Öffnen von `index.html` einfach
+wieder auf "Alle Kurse laden" bzw. "Anderen Ordner wählen" klicken und
+denselben Ordner erneut auswählen. Das war nötig, um den Ordner-Dialog auch
+beim direkten Doppelklick-Öffnen (ohne Server) zuverlässig zum Laufen zu
+bringen.
 
 ## Neue Version einspielen
 

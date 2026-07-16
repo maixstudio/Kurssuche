@@ -77,9 +77,10 @@
 | Decision | Rationale | Date |
 |----------|-----------|------|
 | Next.js als statischer Export (kein Server, kein Vercel) | App wird einmalig gebaut und liegt als eigenständige HTML/JS-Datei im selben geteilten SharePoint-Ordner wie JSON- und PDF-Ordner — kein Internetzugang, kein Hosting nötig | 2026-07-15 |
-| Ordnerzugriff über die native File System Access API (Browser-Funktion, kein npm-Paket) | Kein zusätzliches Paket nötig; die API erlaubt direktes Lesen des ausgewählten Ordners und merkt sich die Berechtigung selbstständig zwischen Sitzungen | 2026-07-15 |
+| ~~Ordnerzugriff über die native File System Access API~~ → **Ersetzt durch `<input type="file" webkitdirectory>`** | Die File System Access API benötigt einen "sicheren Kontext"; beim realen Test (App per Doppelklick als `index.html` geöffnet, also `file://`-Protokoll) blockierte der Browser den Ordner-Dialog komplett (BUG-3, siehe Post-Deployment-Test). Das klassische Datei-Input funktioniert unabhängig vom Protokoll. Preis: kein automatisches Wiedererkennen des Ordners mehr — muss bei jedem Öffnen neu ausgewählt werden | 2026-07-16 |
 | Kein State-Management-Paket (React `useState`/`useReducer` reicht) | Datenmenge (aktuell 48, absehbar niedrige Hundert Kurse) und Komplexität rechtfertigen keine zusätzliche Bibliothek | 2026-07-15 |
 | Bestehende shadcn/ui-Komponenten wiederverwenden (Card, Checkbox, Badge, Button, Accordion) | Bereits im Template installiert, deckt Filterleiste und Kurskarten vollständig ab, keine neuen Abhängigkeiten nötig | 2026-07-15 |
+| `assetPrefix: "."` in `next.config.ts` (relative statt absolute Asset-Pfade) | Next.js verlinkt JS/CSS standardmäßig mit absoluten Pfaden (`/_next/...`), die bei `file://`-Aufruf auf die Dateisystemwurzel statt auf den Build-Ordner zeigen — die App lief dadurch beim ersten echten Test komplett leer (BUG-4, keine Zeile JavaScript wurde geladen). Relative Pfade (`./_next/...`) beheben das | 2026-07-16 |
 
 ---
 <!-- Sections below are added by subsequent skills -->
@@ -147,16 +148,18 @@ allerersten Mal auswählen.
 Keine neuen Pakete nötig — alles Erforderliche (Next.js, React, Tailwind,
 shadcn/ui-Komponenten) ist im Projekt bereits installiert.
 
-### Bekanntes technisches Risiko
+### Bekanntes technisches Risiko (aufgelöst am 2026-07-16)
 
-Der Ordner-Auswahldialog (File System Access API) setzt normalerweise eine
-"sichere" Browser-Umgebung voraus. Bei einer Datei, die direkt per
-Doppelklick vom Ordner geöffnet wird (statt über eine Adresse `http://`),
-kann es browserabhängig zu Einschränkungen kommen. Das wird beim Bauen der
-UI (`/frontend`) als Erstes getestet — falls es nicht zuverlässig
-funktioniert, ist als Fallback ein winziger lokaler Startmechanismus nötig
-(z. B. eine Verknüpfung, die die Seite über `http://localhost` statt direkt
-per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
+Der ursprünglich geplante Ordner-Auswahldialog (File System Access API)
+setzte eine "sichere" Browser-Umgebung voraus. Beim ersten echten Test durch
+den Nutzer (App per Doppelklick als `index.html` geöffnet, `file://`-URL)
+bestätigte sich das Risiko: der Dialog funktionierte nicht (BUG-3). Zusätzlich
+zeigte sich ein zweites, unabhängiges Problem — die App lief unter `file://`
+komplett leer, weil Next.js Assets mit absoluten statt relativen Pfaden
+verlinkt (BUG-4). Beide Probleme sind behoben (siehe Technical Decisions
+oben: `<input type="file" webkitdirectory>` statt File System Access API,
+`assetPrefix: "."` in `next.config.ts`) und durch einen `file://`-Test
+verifiziert.
 
 ## Implementation Notes (Frontend)
 
@@ -181,6 +184,36 @@ per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
 - **BUG-1 behoben:** `src/app/page.tsx` unterscheidet jetzt explizit zwischen "Ordner leer/keine Kursdaten" (eigene Meldung "Keine Kursdaten in diesem Ordner gefunden" + Button "Anderen Ordner wählen") und "Filterkombination liefert keine Treffer" (bisherige Meldung, nur wenn `courses.length > 0`). Der neue Button ruft eine neue Hook-Funktion `pickNewFolder()` (`src/hooks/use-course-data.ts`) auf, die — anders als `requestFolder()` — den gespeicherten Ordner-Handle bewusst ignoriert und immer den Auswahldialog öffnet, damit man tatsächlich einen anderen Ordner wählen kann.
 - **BUG-2 behoben:** `src/app/page.tsx` merkt sich alle erzeugten PDF-Blob-URLs (`objectUrlsRef`) und gibt sie über `URL.revokeObjectURL` frei — automatisch nach 60 Sekunden (genug Zeit, bis der neue Tab das PDF geladen hat) sowie beim Verlassen der Seite.
 - Beide Fixes sind durch neue, per `page.clock`/Mehrfach-Picker-Fixture abgesicherte E2E-Regressionstests abgedeckt (siehe unten).
+
+### Architektur-Wechsel nach echtem Nutzertest (2026-07-16)
+
+Nach dem Deployment hat der Nutzer die App im Zielumfeld getestet (Doppelklick
+auf `index.html`, `file://`-URL) — dabei zeigten sich zwei Probleme, die im
+`/qa`-Schritt nicht auffindbar waren, weil dort immer über `http://localhost`
+getestet wurde:
+
+- **BUG-3 (Architektur):** File System Access API funktioniert nicht bei
+  `file://`-Aufruf. **Fix:** Ordnerauswahl komplett auf
+  `<input type="file" webkitdirectory>` umgestellt (`src/lib/course-loader.ts`,
+  `src/hooks/use-course-data.ts`, `src/app/page.tsx`). Kein Ordner-Handle,
+  keine IndexedDB-Persistenz mehr nötig — dafür entfällt das automatische
+  Wiedererkennen des Ordners (bewusster Trade-off, mit Nutzer abgestimmt). Ein
+  neuer "Anderen Ordner wählen"-Button ist jetzt immer sichtbar (auch mit
+  geladenen Kursen), nicht nur im Leer-Zustand.
+- **BUG-4 (Build-Konfiguration):** Next.js verlinkt JS/CSS standardmäßig mit
+  absoluten Pfaden (`/_next/...`) — bei `file://`-Aufruf zeigen diese auf die
+  Dateisystemwurzel statt auf den Build-Ordner, wodurch **keine Zeile
+  JavaScript lud** (nur das statische HTML-Grundgerüst war sichtbar,
+  komplett funktionslos). **Fix:** `assetPrefix: "."` in `next.config.ts`
+  erzwingt relative Pfade (`./_next/...`).
+- Ein zusätzlicher Bug beim Zusammenspiel der beiden Fixes wurde während der
+  Entwicklung selbst gefunden und behoben: `event.target.value = ""` wurde
+  ursprünglich *vor* dem Auslesen der ausgewählten Dateien aufgerufen, was
+  die `File`-Objekte in diesem Browser vorzeitig ungültig machte. Der Reset
+  passiert jetzt erst nach Abschluss des Einlesens.
+- **Verifiziert:** direkter `file://`-Test (Playwright gegen die gebaute
+  `out/index.html`, ohne jeglichen Server) — Ordnerauswahl und Laden der
+  Kurse funktionieren jetzt genauso wie zuvor nur unter `http://localhost`.
 
 ## QA Test Results
 
@@ -314,15 +347,16 @@ Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-D
 
 ## Deployment
 
-**Status:** ✅ Deployed (als Build-Artefakt bereitgestellt)
-**Deployed:** 2026-07-15
+**Status:** ✅ Deployed (als Build-Artefakt bereitgestellt) — v2, nach echtem Nutzertest korrigiert
+**Deployed:** 2026-07-15 (v1), 2026-07-16 (v2 — BUG-3/BUG-4 Fix)
 **Abweichung vom Standard-Workflow:** Kein Vercel — laut PRD-Constraint läuft die App ohne Server als statischer Export direkt aus dem geteilten SharePoint-Ordner (siehe Tech Design). Statt eines automatischen Vercel-Deploys wird der fertige Build im Repo unter `dist/` bereitgestellt; der Nutzer lädt ihn von dort herunter und kopiert ihn selbst in den SharePoint-Ordner.
 **Build-Artefakt:** `dist/` in diesem Repo (Branch `claude/ai-starter-kit-setup-038jt4`), inkl. `dist/README.md` mit Einrichtungsanleitung
-**Git-Tag:** `v1.0.0-PROJ-1`
+**Git-Tag:** `v1.0.0-PROJ-1` (lokal erstellt, Push zum Remote schlug mit HTTP 403 fehl — keine Tag-Push-Berechtigung in dieser Session)
 
-### Post-Deployment-Hinweis
-Der native Ordner-Auswahldialog (File System Access API) konnte — wie im Tech Design und in den QA-Ergebnissen dokumentiert — nicht automatisiert getestet werden. Nach dem Einrichten im echten SharePoint-Ordner bitte einmal manuell prüfen:
-- [ ] `index.html` öffnet in Edge ohne Fehlermeldung
-- [ ] "Alle Kurse laden" öffnet den Ordner-Dialog und lädt die 48 Kurse korrekt
-- [ ] Nach Neuladen der Seite werden die Kurse automatisch geladen (ohne erneuten Klick)
-- [ ] PDF-Links öffnen die richtigen Original-Dokumente
+### Post-Deployment-Test (durchgeführt)
+Der native Ordner-Auswahldialog konnte im automatisierten `/qa`-Schritt nicht getestet werden (dort lief die App über `http://localhost`, nicht über `file://`). Der Nutzer hat v1 im echten Zielumfeld getestet und zwei Probleme gefunden (BUG-3, BUG-4 — siehe Implementation Notes: "Architektur-Wechsel nach echtem Nutzertest"). Nach dem Fix wurde direkt gegen die gebaute `out/index.html` per `file://`-URL erneut automatisiert getestet:
+- [x] `index.html` öffnet ohne Fehlermeldung, lädt alle JS/CSS-Dateien korrekt (relative Pfade)
+- [x] "Alle Kurse laden" öffnet die Ordnerauswahl und lädt die Kurse korrekt
+- [x] Fehlerhafte/leere Ordner zeigen die korrekten Meldungen
+- [ ] PDF-Links im echten SharePoint-Ordner mit allen 48 PDFs — noch nicht mit echten Daten im Zielordner geprüft, nur mit Testdaten
+- [ ] Von mehreren Kolleg:innen gleichzeitig genutzt — noch nicht im Team getestet (aktuell laut PRD ohnehin nur du als Importer/Tester)

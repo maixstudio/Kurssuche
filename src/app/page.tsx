@@ -14,17 +14,10 @@ import {
 import { CourseCard } from "@/components/kurssuche/course-card"
 
 export default function Home() {
-  const {
-    status,
-    courses,
-    failedFiles,
-    errorMessage,
-    requestFolder,
-    pickNewFolder,
-    getPdfFile,
-    pdfFolderAvailable,
-  } = useCourseData()
+  const { status, courses, failedFiles, errorMessage, loadFromFileList, getPdfFile, pdfFolderAvailable } =
+    useCourseData()
   const [filters, setFilters] = useState<FilterState>(createEmptyFilterState())
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const sortedCourses = useMemo(
     () => [...courses].sort((a, b) => a.titel.localeCompare(b.titel, "de")),
@@ -55,6 +48,18 @@ export default function Home() {
     return true
   }
 
+  async function handleFilesSelected(event: React.ChangeEvent<HTMLInputElement>) {
+    const input = event.target
+    const files = input.files
+    if (files && files.length > 0) {
+      await loadFromFileList(files)
+    }
+    // Erst NACH dem Einlesen zurücksetzen — sonst werden die File-Objekte
+    // ungültig, bevor ihr Inhalt gelesen wurde. Ermöglicht erneutes
+    // Auswählen desselben Ordners.
+    input.value = ""
+  }
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-6">
@@ -64,14 +69,16 @@ export default function Home() {
         </p>
       </header>
 
-      {status === "unsupported" && (
-        <div className="rounded-lg border border-destructive/50 bg-destructive/5 p-4 text-sm text-destructive">
-          Dieser Browser unterstützt den Ordnerzugriff nicht, der für die Kurssuche benötigt wird.
-          Bitte öffne die Anwendung mit Microsoft Edge.
-        </div>
-      )}
+      <input
+        ref={fileInputRef}
+        type="file"
+        webkitdirectory=""
+        multiple
+        className="hidden"
+        onChange={handleFilesSelected}
+      />
 
-      {(status === "needs-permission" || status === "error") && (
+      {(status === "idle" || status === "error") && (
         <div className="rounded-lg border p-6 text-center">
           {status === "error" && errorMessage && (
             <p className="mb-3 text-sm text-destructive">{errorMessage}</p>
@@ -79,14 +86,14 @@ export default function Home() {
           <p className="mb-3 text-sm text-muted-foreground">
             Wähle den Datenordner aus, um alle Kurse zu laden.
           </p>
-          <Button onClick={() => requestFolder()}>
+          <Button onClick={() => fileInputRef.current?.click()}>
             <FolderOpen className="h-4 w-4" />
             Alle Kurse laden
           </Button>
         </div>
       )}
 
-      {(status === "checking" || status === "loading") && (
+      {status === "loading" && (
         <div className="space-y-3">
           <Skeleton className="h-16 w-full" />
           <Skeleton className="h-16 w-full" />
@@ -104,7 +111,7 @@ export default function Home() {
               {failedFiles.length} Datei(en) konnten nicht gelesen werden: {failedFiles.join(", ")}
             </p>
           )}
-          <Button onClick={() => pickNewFolder()}>
+          <Button onClick={() => fileInputRef.current?.click()}>
             <FolderOpen className="h-4 w-4" />
             Anderen Ordner wählen
           </Button>
@@ -119,11 +126,17 @@ export default function Home() {
               {filteredCourses.length !== courses.length &&
                 ` — ${filteredCourses.length} passend zur Filterauswahl`}
             </span>
-            {failedFiles.length > 0 && (
-              <span className="text-destructive">
-                {failedFiles.length} Datei(en) konnten nicht geladen werden: {failedFiles.join(", ")}
-              </span>
-            )}
+            <div className="flex items-center gap-3">
+              {failedFiles.length > 0 && (
+                <span className="text-destructive">
+                  {failedFiles.length} Datei(en) konnten nicht geladen werden: {failedFiles.join(", ")}
+                </span>
+              )}
+              <Button variant="outline" size="sm" onClick={() => fileInputRef.current?.click()}>
+                <FolderOpen className="h-4 w-4" />
+                Anderen Ordner wählen
+              </Button>
+            </div>
           </div>
 
           <div className="mb-6">

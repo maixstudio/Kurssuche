@@ -1,387 +1,239 @@
-import { test, expect, type Page } from "@playwright/test"
+import { test, expect } from "@playwright/test"
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "fs"
+import { tmpdir } from "os"
+import { join } from "path"
 
 /**
- * The File System Access API's folder picker is a native OS dialog that
- * cannot be driven by Playwright. These tests replace `showDirectoryPicker`
- * and `indexedDB` with in-page fakes (installed before the app's scripts
- * run) so the app's real loading/filtering/rendering logic is exercised
- * end-to-end without a real folder or a real permission prompt.
+ * The app selects a folder via <input type="file" webkitdirectory> — no
+ * secure-context API involved (this replaced the File System Access API
+ * after it turned out to be blocked when the app is opened via file://,
+ * see BUG-3 below). Playwright's setInputFiles() can upload a real
+ * directory to a webkitdirectory input directly, so these tests build
+ * actual temp folders instead of mocking browser APIs.
  */
-async function installFakeFileSystem(page: Page) {
-  await page.addInitScript(() => {
-    const kursA = {
-      id: "kurs-a",
-      titel: "Kurs A – Metalltechnik",
-      massnahmentyp: "Orientierung",
-      regionen: ["Bregenz"],
-      themen_tags: ["IT"],
-      zielgruppe_tags: ["Frauen"],
-      zielgruppe: "Zielgruppe von Kurs A",
-      ziel: "Ziel von Kurs A",
-      inhalt: ["Erster Punkt", "Zweiter Punkt"],
-      form_und_dauer: "6 Wochen",
-      termine: [{ kursnummer: "M 1", start: "01.03.2026" }],
-      veranstaltungsort: ["Adresse A"],
-      kontakt: [{ name: "Kontakt A", email: "a@example.at" }],
-      veranstalter: { name: "Veranstalter A" },
-      quelle: { dateiname: "kurs-a.pdf" },
-    }
-    const kursB = {
-      id: "kurs-b",
-      titel: "Kurs B – Pflege",
-      massnahmentyp: "Qualifizierung",
-      regionen: ["Dornbirn"],
-      themen_tags: ["Pflege"],
-      zielgruppe_tags: [],
-      termine: [],
-      veranstaltungsort: [],
-      kontakt: [],
-      quelle: { dateiname: "kurs-b.pdf" },
-    }
-    const kursC = {
-      id: "kurs-c",
-      titel: "Kurs C – Ohne Region",
-      massnahmentyp: "Training",
-      regionen: [],
-      themen_tags: ["IT"],
-      zielgruppe_tags: [],
-      termine: [],
-      veranstaltungsort: [],
-      kontakt: [],
-      quelle: { dateiname: "kurs-c.pdf" },
-    }
+function buildTestFolder() {
+  const root = mkdtempSync(join(tmpdir(), "kurssuche-e2e-"))
+  const coursesDir = join(root, "courses")
+  const pdfDir = join(root, "source-pdfs")
+  mkdirSync(coursesDir)
+  mkdirSync(pdfDir)
 
-    // Spy used by the BUG-2 regression test to verify blob URLs get revoked.
-    ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls = []
-    const originalRevoke = URL.revokeObjectURL.bind(URL)
-    URL.revokeObjectURL = (url: string) => {
-      ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls.push(url)
-      originalRevoke(url)
-    }
+  const kursA = {
+    id: "kurs-a",
+    titel: "Kurs A – Metalltechnik",
+    massnahmentyp: "Orientierung",
+    regionen: ["Bregenz"],
+    themen_tags: ["IT"],
+    zielgruppe_tags: ["Frauen"],
+    zielgruppe: "Zielgruppe von Kurs A",
+    ziel: "Ziel von Kurs A",
+    inhalt: ["Erster Punkt", "Zweiter Punkt"],
+    form_und_dauer: "6 Wochen",
+    termine: [{ kursnummer: "M 1", start: "01.03.2026" }],
+    veranstaltungsort: ["Adresse A"],
+    kontakt: [{ name: "Kontakt A", email: "a@example.at" }],
+    veranstalter: { name: "Veranstalter A" },
+    quelle: { dateiname: "kurs-a.pdf" },
+  }
+  const kursB = {
+    id: "kurs-b",
+    titel: "Kurs B – Pflege",
+    massnahmentyp: "Qualifizierung",
+    regionen: ["Dornbirn"],
+    themen_tags: ["Pflege"],
+    zielgruppe_tags: [],
+    termine: [],
+    veranstaltungsort: [],
+    kontakt: [],
+    quelle: { dateiname: "kurs-b.pdf" },
+  }
+  const kursC = {
+    id: "kurs-c",
+    titel: "Kurs C – Ohne Region",
+    massnahmentyp: "Training",
+    regionen: [],
+    themen_tags: ["IT"],
+    zielgruppe_tags: [],
+    termine: [],
+    veranstaltungsort: [],
+    kontakt: [],
+    quelle: { dateiname: "kurs-c.pdf" },
+  }
 
-    function fileHandle(name: string, content: string) {
-      return {
-        kind: "file",
-        name,
-        getFile: async () => new File([content], name),
-        queryPermission: async () => "granted",
-        requestPermission: async () => "granted",
-      }
-    }
-    function dirHandle(
-      name: string,
-      entries: unknown[],
-      subfolders: Record<string, unknown> = {}
-    ) {
-      return {
-        kind: "directory",
-        name,
-        values: async function* () {
-          for (const e of entries) yield e
-        },
-        getDirectoryHandle: async (childName: string) => {
-          if (subfolders[childName]) return subfolders[childName]
-          throw new DOMException("not found", "NotFoundError")
-        },
-        getFileHandle: async (childName: string) => {
-          const found = (entries as { kind: string; name: string }[]).find(
-            (e) => e.kind === "file" && e.name === childName
-          )
-          if (!found) throw new DOMException("not found", "NotFoundError")
-          return found
-        },
-        queryPermission: async () => "granted",
-        requestPermission: async () => "granted",
-      }
-    }
+  writeFileSync(join(coursesDir, "kurs-a.json"), JSON.stringify(kursA))
+  writeFileSync(join(coursesDir, "kurs-b.json"), JSON.stringify(kursB))
+  writeFileSync(join(coursesDir, "kurs-c.json"), JSON.stringify(kursC))
+  writeFileSync(join(coursesDir, "kaputt.json"), "{ das ist kein gueltiges json")
+  writeFileSync(join(pdfDir, "kurs-a.pdf"), "PDF-INHALT-A")
 
-    const coursesDir = dirHandle("courses", [
-      fileHandle("kurs-a.json", JSON.stringify(kursA)),
-      fileHandle("kurs-b.json", JSON.stringify(kursB)),
-      fileHandle("kurs-c.json", JSON.stringify(kursC)),
-      fileHandle("kaputt.json", "{ das ist kein gueltiges json"),
-    ])
-    const pdfDir = dirHandle("source-pdfs", [fileHandle("kurs-a.pdf", "PDF-INHALT-A")])
-    const root = dirHandle("root", [], { courses: coursesDir, "source-pdfs": pdfDir })
-    Object.defineProperty(window, "showDirectoryPicker", {
-      value: async () => root,
-      writable: true,
-      configurable: true,
-    })
-
-    // Minimal fake IndexedDB — mirrors just enough of the real API surface
-    // that src/lib/course-loader.ts's save/load-handle functions work.
-    // Persists a "granted" flag in localStorage so it survives page reloads
-    // (a fresh addInitScript run creates a new `root`, but the same flag).
-    // `window.indexedDB` is a getter-only accessor on Window.prototype, so a
-    // plain assignment silently no-ops — defineProperty is required.
-    const GRANTED_KEY = "kurssuche-mock-granted"
-    const fakeIndexedDB = {
-      open: () => {
-        const request: Record<string, unknown> = {}
-        setTimeout(() => {
-          const db = {
-            createObjectStore: () => {},
-            transaction: () => {
-              const tx: Record<string, unknown> = {}
-              const store = {
-                put: () => {
-                  localStorage.setItem(GRANTED_KEY, "1")
-                  return {}
-                },
-                get: () => {
-                  const r: Record<string, unknown> = {
-                    result: localStorage.getItem(GRANTED_KEY) === "1" ? root : undefined,
-                  }
-                  setTimeout(() => (r.onsuccess as (() => void) | undefined)?.(), 0)
-                  return r
-                },
-              }
-              tx.objectStore = () => store
-              setTimeout(() => (tx.oncomplete as (() => void) | undefined)?.(), 0)
-              return tx
-            },
-          }
-          request.result = db
-          ;(request.onsuccess as (() => void) | undefined)?.()
-        }, 0)
-        return request
-      },
-    }
-    Object.defineProperty(window, "indexedDB", {
-      value: fakeIndexedDB,
-      writable: true,
-      configurable: true,
-    })
-  })
+  return root
 }
 
-/**
- * First folder pick returns an empty folder (BUG-1 regression: wrong
- * message / no way back), second pick returns a folder with one course —
- * simulating the user realizing they picked the wrong folder and retrying.
- */
-async function installFakeFileSystemEmptyThenFull(page: Page) {
-  await page.addInitScript(() => {
-    function fileHandle(name: string, content: string) {
-      return {
-        kind: "file",
-        name,
-        getFile: async () => new File([content], name),
-        queryPermission: async () => "granted",
-        requestPermission: async () => "granted",
-      }
-    }
-    function dirHandle(name: string, entries: unknown[], subfolders: Record<string, unknown> = {}) {
-      return {
-        kind: "directory",
-        name,
-        values: async function* () {
-          for (const e of entries) yield e
-        },
-        getDirectoryHandle: async (childName: string) => {
-          if (subfolders[childName]) return subfolders[childName]
-          throw new DOMException("not found", "NotFoundError")
-        },
-        getFileHandle: async () => {
-          throw new DOMException("not found", "NotFoundError")
-        },
-        queryPermission: async () => "granted",
-        requestPermission: async () => "granted",
-      }
-    }
-
-    const emptyRoot = dirHandle("empty", [])
-    const fullCoursesDir = dirHandle("courses", [
-      fileHandle(
-        "kurs-x.json",
-        JSON.stringify({
-          id: "kurs-x",
-          titel: "Kurs X",
-          regionen: [],
-          themen_tags: [],
-          zielgruppe_tags: [],
-          termine: [],
-          veranstaltungsort: [],
-          kontakt: [],
-          quelle: { dateiname: "kurs-x.pdf" },
-        })
-      ),
-    ])
-    const fullRoot = dirHandle("full", [], { courses: fullCoursesDir })
-
-    let callCount = 0
-    Object.defineProperty(window, "showDirectoryPicker", {
-      value: async () => {
-        callCount += 1
-        return callCount === 1 ? emptyRoot : fullRoot
-      },
-      writable: true,
-      configurable: true,
-    })
-
-    const fakeIndexedDB = {
-      open: () => {
-        const request: Record<string, unknown> = {}
-        setTimeout(() => {
-          const db = {
-            createObjectStore: () => {},
-            transaction: () => {
-              const tx: Record<string, unknown> = {}
-              const store = {
-                put: () => ({}),
-                get: () => {
-                  const r: Record<string, unknown> = { result: undefined }
-                  setTimeout(() => (r.onsuccess as (() => void) | undefined)?.(), 0)
-                  return r
-                },
-              }
-              tx.objectStore = () => store
-              setTimeout(() => (tx.oncomplete as (() => void) | undefined)?.(), 0)
-              return tx
-            },
-          }
-          request.result = db
-          ;(request.onsuccess as (() => void) | undefined)?.()
-        }, 0)
-        return request
-      },
-    }
-    Object.defineProperty(window, "indexedDB", { value: fakeIndexedDB, writable: true, configurable: true })
-  })
+function buildEmptyTestFolder() {
+  const root = mkdtempSync(join(tmpdir(), "kurssuche-e2e-empty-"))
+  mkdirSync(join(root, "courses"))
+  // Playwright's setInputFiles cannot upload a directory containing zero
+  // files at all, so this placeholder (ignored by the app — not JSON) keeps
+  // the fixture uploadable while still testing the "no course data" path.
+  writeFileSync(join(root, "README.txt"), "placeholder")
+  return root
 }
 
-test.beforeEach(async ({ page }) => {
-  await installFakeFileSystem(page)
-})
+async function selectFolder(page: import("@playwright/test").Page, folderPath: string) {
+  await page.locator('input[type="file"]').setInputFiles(folderPath)
+}
 
-test("lädt Kurse nach Klick auf 'Alle Kurse laden' und zeigt sie alphabetisch sortiert", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+test.describe("PROJ-1 Kurssuche mit Filtern", () => {
+  let folder: string
+  let emptyFolder: string
 
-  const titles = await page.locator("button", { hasText: "Kurs" }).allTextContents()
-  const order = titles.map((t) => t.trim()).filter((t) => t.startsWith("Kurs"))
-  expect(order[0]).toContain("Kurs A")
-  expect(order[1]).toContain("Kurs B")
-  expect(order[2]).toContain("Kurs C")
-})
+  test.beforeAll(() => {
+    folder = buildTestFolder()
+    emptyFolder = buildEmptyTestFolder()
+  })
 
-test("meldet eine fehlerhafte JSON-Datei, ohne das Laden der übrigen Kurse zu blockieren", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("kaputt.json", { exact: false })).toBeVisible()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
-})
+  test.afterAll(() => {
+    rmSync(folder, { recursive: true, force: true })
+    rmSync(emptyFolder, { recursive: true, force: true })
+  })
 
-test("merkt sich die Ordnerfreigabe und lädt beim erneuten Öffnen automatisch", async ({ page }) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+  test("lädt Kurse nach Ordnerauswahl und zeigt sie alphabetisch sortiert", async ({ page }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
 
-  await page.reload()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
-  await expect(page.getByRole("button", { name: "Alle Kurse laden" })).not.toBeVisible()
-})
+    const titles = await page.locator("button", { hasText: "Kurs" }).allTextContents()
+    const order = titles.map((t) => t.trim()).filter((t) => t.startsWith("Kurs"))
+    expect(order[0]).toContain("Kurs A")
+    expect(order[1]).toContain("Kurs B")
+    expect(order[2]).toContain("Kurs C")
+  })
 
-test("Themen-Filter: ODER innerhalb einer Kategorie zeigt Kurse mit mindestens einem Tag", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+  test("meldet eine fehlerhafte JSON-Datei, ohne das Laden der übrigen Kurse zu blockieren", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("kaputt.json", { exact: false })).toBeVisible()
+    await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+  })
 
-  await page.getByRole("checkbox", { name: "IT" }).check()
-  await expect(page.getByText("Kurs A", { exact: false })).toBeVisible()
-  await expect(page.getByText("Kurs C", { exact: false })).toBeVisible()
-  await expect(page.getByText("Kurs B", { exact: false })).not.toBeVisible()
-})
+  test("Themen-Filter: ODER innerhalb einer Kategorie zeigt Kurse mit mindestens einem Tag", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
 
-test("Region + Thema kombiniert: UND zwischen Kategorien liefert keine Treffer und zeigt Hinweis", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+    await page.getByRole("checkbox", { name: "IT" }).check()
+    await expect(page.getByText("Kurs A", { exact: false })).toBeVisible()
+    await expect(page.getByText("Kurs C", { exact: false })).toBeVisible()
+    await expect(page.getByText("Kurs B", { exact: false })).not.toBeVisible()
+  })
 
-  await page.getByRole("checkbox", { name: "Bregenz" }).check()
-  await page.getByRole("checkbox", { name: "Pflege" }).check()
-  await expect(page.getByText("Keine Kurse gefunden", { exact: false })).toBeVisible()
-})
+  test("Region + Thema kombiniert: UND zwischen Kategorien liefert keine Treffer und zeigt Hinweis", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
 
-test("ein Kurs ohne Region verschwindet bei aktivem Regionsfilter, ist ohne Filter sichtbar", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await expect(page.getByText("Kurs C", { exact: false })).toBeVisible()
+    await page.getByRole("checkbox", { name: "Bregenz" }).check()
+    await page.getByRole("checkbox", { name: "Pflege" }).check()
+    await expect(page.getByText("Keine Kurse gefunden", { exact: false })).toBeVisible()
+  })
 
-  await page.getByRole("checkbox", { name: "Bregenz" }).check()
-  await expect(page.getByText("Kurs C", { exact: false })).not.toBeVisible()
-})
+  test("ein Kurs ohne Region verschwindet bei aktivem Regionsfilter, ist ohne Filter sichtbar", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("Kurs C", { exact: false })).toBeVisible()
 
-test("aufgeklappte Kurskarte zeigt alle Details, fehlende Felder als 'keine Angabe'", async ({
-  page,
-}) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await page.getByText("Kurs B", { exact: false }).click()
+    await page.getByRole("checkbox", { name: "Bregenz" }).check()
+    await expect(page.getByText("Kurs C", { exact: false })).not.toBeVisible()
+  })
 
-  await expect(page.getByText("keine Angabe").first()).toBeVisible()
-})
+  test("aufgeklappte Kurskarte zeigt alle Details, fehlende Felder als 'keine Angabe'", async ({ page }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await page.getByText("Kurs B", { exact: false }).click()
 
-test("Original-PDF öffnen springt zum richtigen Dokument in einem neuen Tab", async ({ page, context }) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await page.getByText("Kurs A", { exact: false }).click()
+    await expect(page.getByText("keine Angabe").first()).toBeVisible()
+  })
 
-  const [popup] = await Promise.all([
-    context.waitForEvent("page"),
-    page.getByRole("button", { name: "Original-PDF öffnen" }).click(),
-  ])
-  await popup.waitForLoadState()
-  expect(popup.url()).toContain("blob:")
-})
+  test("Original-PDF öffnen springt zum richtigen Dokument in einem neuen Tab", async ({
+    page,
+    context,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await page.getByText("Kurs A", { exact: false }).click()
 
-test("fehlendes PDF zeigt eine Fehlermeldung statt eines leeren Tabs", async ({ page }) => {
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await page.getByText("Kurs B", { exact: false }).click()
+    const [popup] = await Promise.all([
+      context.waitForEvent("page"),
+      page.getByRole("button", { name: "Original-PDF öffnen" }).click(),
+    ])
+    await popup.waitForLoadState()
+    expect(popup.url()).toContain("blob:")
+  })
 
-  await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
-  await expect(page.getByText("nicht gefunden", { exact: false })).toBeVisible()
-})
+  test("fehlendes PDF zeigt eine Fehlermeldung statt eines leeren Tabs", async ({ page }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await page.getByText("Kurs B", { exact: false }).click()
 
-test("BUG-1 Regression: leerer Ordner zeigt eigene Meldung mit Möglichkeit, einen anderen Ordner zu wählen", async ({
-  page,
-}) => {
-  await installFakeFileSystemEmptyThenFull(page)
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
+    await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
+    await expect(page.getByText("nicht gefunden", { exact: false })).toBeVisible()
+  })
 
-  await expect(page.getByText("Keine Kursdaten in diesem Ordner gefunden")).toBeVisible()
-  await expect(page.getByText("Keine Kurse gefunden. Passe die Filterauswahl an.")).not.toBeVisible()
+  test("BUG-1 Regression: leerer Ordner zeigt eigene Meldung mit Möglichkeit, einen anderen Ordner zu wählen", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, emptyFolder)
 
-  await page.getByRole("button", { name: "Anderen Ordner wählen" }).click()
-  await expect(page.getByText("Kurs X", { exact: false })).toBeVisible()
-})
+    await expect(page.getByText("Keine Kursdaten in diesem Ordner gefunden")).toBeVisible()
+    await expect(page.getByText("Keine Kurse gefunden. Passe die Filterauswahl an.")).not.toBeVisible()
 
-test("BUG-2 Regression: PDF-Blob-URL wird nach dem Öffnen wieder freigegeben", async ({ page }) => {
-  await page.clock.install()
-  await page.goto("/")
-  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
-  await page.getByText("Kurs A", { exact: false }).click()
+    await selectFolder(page, folder)
+    await expect(page.getByText("Kurs A", { exact: false })).toBeVisible()
+  })
 
-  const popupPromise = page.context().waitForEvent("page")
-  await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
-  const popup = await popupPromise
-  await popup.waitForLoadState()
+  test("BUG-2 Regression: PDF-Blob-URL wird nach dem Öffnen wieder freigegeben", async ({ page }) => {
+    await page.clock.install()
+    await page.goto("/")
+    await page.addInitScript(() => {
+      ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls = []
+      const original = URL.revokeObjectURL.bind(URL)
+      URL.revokeObjectURL = (url: string) => {
+        ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls.push(url)
+        original(url)
+      }
+    })
+    await page.reload()
+    await selectFolder(page, folder)
+    await page.getByText("Kurs A", { exact: false }).click()
 
-  await page.clock.fastForward(61_000)
-  const revokedUrls = await page.evaluate(() => (window as unknown as { __revokedUrls: string[] }).__revokedUrls)
-  expect(revokedUrls).toContain(popup.url())
+    const popupPromise = page.context().waitForEvent("page")
+    await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
+    const popup = await popupPromise
+    await popup.waitForLoadState()
+
+    await page.clock.fastForward(61_000)
+    const revokedUrls = await page.evaluate(
+      () => (window as unknown as { __revokedUrls: string[] }).__revokedUrls
+    )
+    expect(revokedUrls).toContain(popup.url())
+  })
+
+  test("BUG-3 Regression: 'Anderen Ordner wählen' ist jederzeit verfügbar, auch mit geladenen Kursen", async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await selectFolder(page, folder)
+    await expect(page.getByText("3 Kurse geladen", { exact: false })).toBeVisible()
+
+    await expect(page.getByRole("button", { name: "Anderen Ordner wählen" })).toBeVisible()
+  })
 })
