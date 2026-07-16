@@ -1,6 +1,6 @@
 # PROJ-1: Kurssuche mit Filtern
 
-## Status: In Progress
+## Status: Approved
 **Created:** 2026-07-15
 **Last Updated:** 2026-07-15
 
@@ -280,6 +280,37 @@ Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-D
 **Automatisierte Tests:**
 - Unit-Tests (Vitest): `src/components/kurssuche/filter-panel.test.ts`, `src/lib/course-loader.test.ts` — 13/13 bestanden
 - E2E-Tests (Playwright): `tests/PROJ-1-kurssuche-mit-filtern.spec.ts` — 9 Szenarien × 2 Projekte (Chromium Desktop + Mobile Chrome) = 18/18 bestanden
+
+---
+
+## QA Re-Test (nach Bugfix-Runde)
+
+**Tested:** 2026-07-15
+**App URL:** http://localhost:3000
+**Tester:** QA Engineer (AI)
+
+### Verifikation der gemeldeten Bugs
+
+#### BUG-1: Irreführende Meldung bei leerem/falschem Datenordner
+- [x] **Verifiziert behoben.** Neuer Regressionstest "BUG-1 Regression: leerer Ordner zeigt eigene Meldung mit Möglichkeit, einen anderen Ordner zu wählen" bestätigt: eigene Meldung "Keine Kursdaten in diesem Ordner gefunden" erscheint, die alte generische Filter-Meldung erscheint nicht, und der Button "Anderen Ordner wählen" führt tatsächlich zu einem neu ausgewählten (nicht demselben) Ordner mit dessen Kursen
+- Visuell bestätigt (Screenshot an Nutzer gesendet)
+
+#### BUG-2: Geöffnete PDF-Blob-URLs werden nie freigegeben
+- [x] **Verifiziert behoben.** Neuer Regressionstest "BUG-2 Regression: PDF-Blob-URL wird nach dem Öffnen wieder freigegeben" bestätigt per `page.clock.fastForward` (60s), dass `URL.revokeObjectURL` für die geöffnete Blob-URL aufgerufen wird
+
+### Vollständiger Testlauf (Re-Test)
+- `npm run build` — fehlerfrei
+- `npm run lint` — fehlerfrei (nur der vorbestehende, feature-fremde Fehler in `src/components/ui/sidebar.tsx` bleibt bestehen)
+- `npm test` (Vitest) — 13/13 bestanden
+- `npm run test:e2e` (Playwright) — 22/22 bestanden (11 Szenarien × 2 Projekte, inkl. beider neuer Regressionstests)
+- Keine Regression bei den zuvor bestandenen Kriterien festgestellt
+
+### Aktualisierte Summary
+- **Acceptance Criteria:** 11/12 automatisiert bestätigt, 1 durch Code-Review (AC-3, unverändert — mangels Testbarkeit des echten Berechtigungswiderrufs)
+- **Bugs offen:** 0 (beide gemeldeten Bugs verifiziert behoben)
+- **Security:** Pass — keine Befunde
+- **Production Ready:** JA
+- **Recommendation:** Deploy
 
 ## Deployment
 _To be added by /deploy_
