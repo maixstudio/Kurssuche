@@ -15,7 +15,7 @@
 
 | ID | Feature | Status | Spec | Created |
 |----|---------|--------|------|---------|
-| PROJ-1 | Kurssuche mit Filtern | In Review | [Spec](PROJ-1-kurssuche-mit-filtern.md) | 2026-07-15 |
+| PROJ-1 | Kurssuche mit Filtern | In Progress | [Spec](PROJ-1-kurssuche-mit-filtern.md) | 2026-07-15 |
 | PROJ-2 | Kurs-Erfassung (PDF-Import) | Roadmap | - | 2026-07-15 |
 | PROJ-3 | Kurs-Detailansicht | Roadmap | - | 2026-07-15 |
 | PROJ-4 | Mehrbenutzer-Sync (später) | Roadmap | - | 2026-07-15 |

@@ -1,6 +1,6 @@
 # PROJ-1: Kurssuche mit Filtern
 
-## Status: In Review
+## Status: In Progress
 **Created:** 2026-07-15
 **Last Updated:** 2026-07-15
 
@@ -177,6 +177,11 @@ per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
 
 **Abweichungen vom Tech Design:** Keine.
 
+### Bugfix-Runde (nach QA vom 2026-07-15)
+- **BUG-1 behoben:** `src/app/page.tsx` unterscheidet jetzt explizit zwischen "Ordner leer/keine Kursdaten" (eigene Meldung "Keine Kursdaten in diesem Ordner gefunden" + Button "Anderen Ordner wählen") und "Filterkombination liefert keine Treffer" (bisherige Meldung, nur wenn `courses.length > 0`). Der neue Button ruft eine neue Hook-Funktion `pickNewFolder()` (`src/hooks/use-course-data.ts`) auf, die — anders als `requestFolder()` — den gespeicherten Ordner-Handle bewusst ignoriert und immer den Auswahldialog öffnet, damit man tatsächlich einen anderen Ordner wählen kann.
+- **BUG-2 behoben:** `src/app/page.tsx` merkt sich alle erzeugten PDF-Blob-URLs (`objectUrlsRef`) und gibt sie über `URL.revokeObjectURL` frei — automatisch nach 60 Sekunden (genug Zeit, bis der neue Tab das PDF geladen hat) sowie beim Verlassen der Seite.
+- Beide Fixes sind durch neue, per `page.clock`/Mehrfach-Picker-Fixture abgesicherte E2E-Regressionstests abgedeckt (siehe unten).
+
 ## QA Test Results
 
 **Tested:** 2026-07-15
@@ -254,6 +259,7 @@ Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-D
   2. Erwartet (laut Spec-Edge-Case): Hinweistext "Keine Kursdaten in diesem Ordner gefunden" mit Möglichkeit, den Ordner erneut zu wählen
   3. Tatsächlich: Es erscheint dieselbe generische Meldung wie bei einer zu engen Filterkombination ("Keine Kurse gefunden. Passe die Filterauswahl an.") — irreführend, da keine Filter aktiv sein müssen, und es keinen Weg zurück zum Ordner-Auswahl-Button gibt
 - **Priority:** Fix before deployment
+- **Status:** Fixed (siehe "Bugfix-Runde" in den Implementation Notes) — Regressionstest ergänzt, erneute Verifikation durch `/qa` steht aus
 
 #### BUG-2: Geöffnete PDF-Blob-URLs werden nie freigegeben
 - **Severity:** Low
@@ -262,6 +268,7 @@ Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-D
   2. Erwartet: Nicht mehr benötigte `blob:`-URLs werden freigegeben (`URL.revokeObjectURL`)
   3. Tatsächlich: URLs werden nie revoked — bei sehr vielen geöffneten PDFs in einer Sitzung steigt der Speicherverbrauch geringfügig
 - **Priority:** Nice to have
+- **Status:** Fixed (siehe "Bugfix-Runde" in den Implementation Notes) — Regressionstest ergänzt, erneute Verifikation durch `/qa` steht aus
 
 ### Summary
 - **Acceptance Criteria:** 11/12 automatisiert bestätigt, 1 durch Code-Review (AC-3, mangels Testbarkeit des echten Berechtigungswiderrufs)

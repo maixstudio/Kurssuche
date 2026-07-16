@@ -51,6 +51,14 @@ async function installFakeFileSystem(page: Page) {
       quelle: { dateiname: "kurs-c.pdf" },
     }
 
+    // Spy used by the BUG-2 regression test to verify blob URLs get revoked.
+    ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls = []
+    const originalRevoke = URL.revokeObjectURL.bind(URL)
+    URL.revokeObjectURL = (url: string) => {
+      ;(window as unknown as { __revokedUrls: string[] }).__revokedUrls.push(url)
+      originalRevoke(url)
+    }
+
     function fileHandle(name: string, content: string) {
       return {
         kind: "file",
@@ -145,6 +153,101 @@ async function installFakeFileSystem(page: Page) {
       writable: true,
       configurable: true,
     })
+  })
+}
+
+/**
+ * First folder pick returns an empty folder (BUG-1 regression: wrong
+ * message / no way back), second pick returns a folder with one course —
+ * simulating the user realizing they picked the wrong folder and retrying.
+ */
+async function installFakeFileSystemEmptyThenFull(page: Page) {
+  await page.addInitScript(() => {
+    function fileHandle(name: string, content: string) {
+      return {
+        kind: "file",
+        name,
+        getFile: async () => new File([content], name),
+        queryPermission: async () => "granted",
+        requestPermission: async () => "granted",
+      }
+    }
+    function dirHandle(name: string, entries: unknown[], subfolders: Record<string, unknown> = {}) {
+      return {
+        kind: "directory",
+        name,
+        values: async function* () {
+          for (const e of entries) yield e
+        },
+        getDirectoryHandle: async (childName: string) => {
+          if (subfolders[childName]) return subfolders[childName]
+          throw new DOMException("not found", "NotFoundError")
+        },
+        getFileHandle: async () => {
+          throw new DOMException("not found", "NotFoundError")
+        },
+        queryPermission: async () => "granted",
+        requestPermission: async () => "granted",
+      }
+    }
+
+    const emptyRoot = dirHandle("empty", [])
+    const fullCoursesDir = dirHandle("courses", [
+      fileHandle(
+        "kurs-x.json",
+        JSON.stringify({
+          id: "kurs-x",
+          titel: "Kurs X",
+          regionen: [],
+          themen_tags: [],
+          zielgruppe_tags: [],
+          termine: [],
+          veranstaltungsort: [],
+          kontakt: [],
+          quelle: { dateiname: "kurs-x.pdf" },
+        })
+      ),
+    ])
+    const fullRoot = dirHandle("full", [], { courses: fullCoursesDir })
+
+    let callCount = 0
+    Object.defineProperty(window, "showDirectoryPicker", {
+      value: async () => {
+        callCount += 1
+        return callCount === 1 ? emptyRoot : fullRoot
+      },
+      writable: true,
+      configurable: true,
+    })
+
+    const fakeIndexedDB = {
+      open: () => {
+        const request: Record<string, unknown> = {}
+        setTimeout(() => {
+          const db = {
+            createObjectStore: () => {},
+            transaction: () => {
+              const tx: Record<string, unknown> = {}
+              const store = {
+                put: () => ({}),
+                get: () => {
+                  const r: Record<string, unknown> = { result: undefined }
+                  setTimeout(() => (r.onsuccess as (() => void) | undefined)?.(), 0)
+                  return r
+                },
+              }
+              tx.objectStore = () => store
+              setTimeout(() => (tx.oncomplete as (() => void) | undefined)?.(), 0)
+              return tx
+            },
+          }
+          request.result = db
+          ;(request.onsuccess as (() => void) | undefined)?.()
+        }, 0)
+        return request
+      },
+    }
+    Object.defineProperty(window, "indexedDB", { value: fakeIndexedDB, writable: true, configurable: true })
   })
 }
 
@@ -251,4 +354,34 @@ test("fehlendes PDF zeigt eine Fehlermeldung statt eines leeren Tabs", async ({ 
 
   await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
   await expect(page.getByText("nicht gefunden", { exact: false })).toBeVisible()
+})
+
+test("BUG-1 Regression: leerer Ordner zeigt eigene Meldung mit Möglichkeit, einen anderen Ordner zu wählen", async ({
+  page,
+}) => {
+  await installFakeFileSystemEmptyThenFull(page)
+  await page.goto("/")
+  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
+
+  await expect(page.getByText("Keine Kursdaten in diesem Ordner gefunden")).toBeVisible()
+  await expect(page.getByText("Keine Kurse gefunden. Passe die Filterauswahl an.")).not.toBeVisible()
+
+  await page.getByRole("button", { name: "Anderen Ordner wählen" }).click()
+  await expect(page.getByText("Kurs X", { exact: false })).toBeVisible()
+})
+
+test("BUG-2 Regression: PDF-Blob-URL wird nach dem Öffnen wieder freigegeben", async ({ page }) => {
+  await page.clock.install()
+  await page.goto("/")
+  await page.getByRole("button", { name: "Alle Kurse laden" }).click()
+  await page.getByText("Kurs A", { exact: false }).click()
+
+  const popupPromise = page.context().waitForEvent("page")
+  await page.getByRole("button", { name: "Original-PDF öffnen" }).click()
+  const popup = await popupPromise
+  await popup.waitForLoadState()
+
+  await page.clock.fastForward(61_000)
+  const revokedUrls = await page.evaluate(() => (window as unknown as { __revokedUrls: string[] }).__revokedUrls)
+  expect(revokedUrls).toContain(popup.url())
 })

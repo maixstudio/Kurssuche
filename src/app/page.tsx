@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { FolderOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -14,8 +14,16 @@ import {
 import { CourseCard } from "@/components/kurssuche/course-card"
 
 export default function Home() {
-  const { status, courses, failedFiles, errorMessage, requestFolder, getPdfFile, pdfFolderAvailable } =
-    useCourseData()
+  const {
+    status,
+    courses,
+    failedFiles,
+    errorMessage,
+    requestFolder,
+    pickNewFolder,
+    getPdfFile,
+    pdfFolderAvailable,
+  } = useCourseData()
   const [filters, setFilters] = useState<FilterState>(createEmptyFilterState())
 
   const sortedCourses = useMemo(
@@ -27,11 +35,23 @@ export default function Home() {
     [sortedCourses, filters]
   )
 
+  // PDF-Blob-URLs freigeben, sobald der geöffnete Tab genug Zeit zum Laden
+  // hatte, und alle noch offenen beim Verlassen der Seite (BUG-2).
+  const objectUrlsRef = useRef<string[]>([])
+  useEffect(() => {
+    const urls = objectUrlsRef.current
+    return () => {
+      urls.forEach((url) => URL.revokeObjectURL(url))
+    }
+  }, [])
+
   async function handleOpenPdf(dateiname: string): Promise<boolean> {
     const file = await getPdfFile(dateiname)
     if (!file) return false
     const url = URL.createObjectURL(file)
+    objectUrlsRef.current.push(url)
     window.open(url, "_blank", "noopener,noreferrer")
+    setTimeout(() => URL.revokeObjectURL(url), 60_000)
     return true
   }
 
@@ -74,7 +94,24 @@ export default function Home() {
         </div>
       )}
 
-      {status === "ready" && (
+      {status === "ready" && courses.length === 0 && (
+        <div className="rounded-lg border p-6 text-center">
+          <p className="mb-3 text-sm text-muted-foreground">
+            Keine Kursdaten in diesem Ordner gefunden.
+          </p>
+          {failedFiles.length > 0 && (
+            <p className="mb-3 text-xs text-destructive">
+              {failedFiles.length} Datei(en) konnten nicht gelesen werden: {failedFiles.join(", ")}
+            </p>
+          )}
+          <Button onClick={() => pickNewFolder()}>
+            <FolderOpen className="h-4 w-4" />
+            Anderen Ordner wählen
+          </Button>
+        </div>
+      )}
+
+      {status === "ready" && courses.length > 0 && (
         <>
           <div className="mb-4 flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
             <span>

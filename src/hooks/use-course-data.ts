@@ -83,6 +83,19 @@ export function useCourseData() {
     }
   }, [loadFromHandle])
 
+  /** Always opens the picker, even if a folder is already saved — for "Anderen Ordner wählen". */
+  const pickNewFolder = useCallback(async () => {
+    try {
+      const picked = await pickDataFolder()
+      await saveDirectoryHandle(picked)
+      await loadFromHandle(picked)
+    } catch (err) {
+      if (err instanceof Error && err.name === "AbortError") return
+      setErrorMessage(err instanceof Error ? err.message : "Ordner konnte nicht geöffnet werden.")
+      setStatus("error")
+    }
+  }, [loadFromHandle])
+
   const getPdfFile = useCallback(
     (dateiname: string) => resolvePdfFile(pdfFolderHandle, dateiname),
     [pdfFolderHandle]
@@ -94,6 +107,7 @@ export function useCourseData() {
     failedFiles,
     errorMessage,
     requestFolder,
+    pickNewFolder,
     getPdfFile,
     pdfFolderAvailable: pdfFolderHandle !== null,
   }
