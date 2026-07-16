@@ -1,6 +1,6 @@
 # PROJ-1: Kurssuche mit Filtern
 
-## Status: Planned
+## Status: In Progress
 **Created:** 2026-07-15
 **Last Updated:** 2026-07-15
 
@@ -157,6 +157,25 @@ UI (`/frontend`) als Erstes getestet — falls es nicht zuverlässig
 funktioniert, ist als Fallback ein winziger lokaler Startmechanismus nötig
 (z. B. eine Verknüpfung, die die Seite über `http://localhost` statt direkt
 per Doppelklick öffnet). Das ändert nichts an Design oder Bedienung der App.
+
+## Implementation Notes (Frontend)
+
+**Umgesetzt:**
+- `src/types/course.ts` — TypeScript-Typen für das Kurs-JSON-Schema + Filterlogik-Helfer (`getCourseFilterValues`)
+- `src/types/file-system-access.d.ts` — Ambient-Typdeklarationen für die File System Access API (kein npm-Paket nötig)
+- `src/lib/course-loader.ts` — Ordnerauswahl, IndexedDB-Persistenz des Ordner-Handles, Einlesen aller JSON-Dateien, Auflösen des PDF-Geschwisterordners (mit Namens-Alias-Liste: `courses`/`kurse`/`json` bzw. `source-pdfs`/`pdfs`/`pdf`/`dokumente`)
+- `src/hooks/use-course-data.ts` — React-Hook, der beim Laden automatisch prüft, ob eine gespeicherte Ordnerberechtigung noch gültig ist, und sonst den "Alle Kurse laden"-Zustand zeigt
+- `src/components/kurssuche/filter-panel.tsx` — Filterkategorien dynamisch aus den geladenen Kursen abgeleitet (inkl. Anzahl pro Tag), UND zwischen Kategorien / ODER innerhalb einer Kategorie (`courseMatchesFilters`)
+- `src/components/kurssuche/course-card.tsx` — aufklappbare Kurskarte (shadcn Accordion, `type="multiple"` für unabhängiges Auf-/Zuklappen), fehlende Felder als "keine Angabe", PDF-Link öffnet die Datei über `URL.createObjectURL`
+- `src/app/page.tsx` — Hauptseite: lädt/verwaltet Zustand, zeigt Lade-/Fehler-/Leer-Zustände, sortiert alphabetisch nach Titel
+- `next.config.ts` — `output: "export"` für den statischen Build ohne Server
+
+**Verifiziert:**
+- `npm run build` (statischer Export) und `npm run lint` laufen fehlerfrei (ein vorbestehender, nicht mit dieser Feature zusammenhängender Lint-Fehler in `src/components/ui/sidebar.tsx` bleibt bestehen)
+- Manuell im Browser geprüft (Playwright-Screenshot-Test mit Beispieldaten aus `data/courses/`): Anfangszustand mit "Alle Kurse laden"-Button, geladene Kursliste mit Filterleiste, aufklappbare Detailansicht inkl. aller Felder, Filterung (UND/ODER-Logik) reduziert die Liste korrekt, fehlende Felder (getestet am Kurs "MIA") zeigen "keine Angabe"
+- Der native Ordner-Auswahldialog selbst (`showDirectoryPicker`) kann nicht automatisiert getestet werden (Browser-natives UI außerhalb der Seite) — das im Tech Design genannte Risiko (Verhalten bei `file://`-Aufruf) ist daher weiterhin ungetestet und bleibt als offener Punkt bestehen, bis die App im Zielumfeld (SharePoint-Ordner, Edge) ausprobiert wird
+
+**Abweichungen vom Tech Design:** Keine.
 
 ## QA Test Results
 _To be added by /qa_

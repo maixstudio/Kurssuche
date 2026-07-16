@@ -1,101 +1,116 @@
-import Image from 'next/image'
+"use client"
+
+import { useMemo, useState } from "react"
+import { FolderOpen } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Skeleton } from "@/components/ui/skeleton"
+import { useCourseData } from "@/hooks/use-course-data"
+import {
+  FilterPanel,
+  createEmptyFilterState,
+  courseMatchesFilters,
+  type FilterState,
+} from "@/components/kurssuche/filter-panel"
+import { CourseCard } from "@/components/kurssuche/course-card"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { status, courses, failedFiles, errorMessage, requestFolder, getPdfFile, pdfFolderAvailable } =
+    useCourseData()
+  const [filters, setFilters] = useState<FilterState>(createEmptyFilterState())
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const sortedCourses = useMemo(
+    () => [...courses].sort((a, b) => a.titel.localeCompare(b.titel, "de")),
+    [courses]
+  )
+  const filteredCourses = useMemo(
+    () => sortedCourses.filter((c) => courseMatchesFilters(c, filters)),
+    [sortedCourses, filters]
+  )
+
+  async function handleOpenPdf(dateiname: string): Promise<boolean> {
+    const file = await getPdfFile(dateiname)
+    if (!file) return false
+    const url = URL.createObjectURL(file)
+    window.open(url, "_blank", "noopener,noreferrer")
+    return true
+  }
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <header className="mb-6">
+        <h1 className="text-2xl font-bold tracking-tight">Kurssuche</h1>
+        <p className="text-sm text-muted-foreground">
+          Durchsuchbare AMS-Kursangebote — Daten werden aus dem geteilten Datenordner geladen.
+        </p>
+      </header>
+
+      {status === "unsupported" && (
+        <div className="rounded-lg border border-destructive/50 bg-destructive/5 p-4 text-sm text-destructive">
+          Dieser Browser unterstützt den Ordnerzugriff nicht, der für die Kurssuche benötigt wird.
+          Bitte öffne die Anwendung mit Microsoft Edge.
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      )}
+
+      {(status === "needs-permission" || status === "error") && (
+        <div className="rounded-lg border p-6 text-center">
+          {status === "error" && errorMessage && (
+            <p className="mb-3 text-sm text-destructive">{errorMessage}</p>
+          )}
+          <p className="mb-3 text-sm text-muted-foreground">
+            Wähle den Datenordner aus, um alle Kurse zu laden.
+          </p>
+          <Button onClick={() => requestFolder()}>
+            <FolderOpen className="h-4 w-4" />
+            Alle Kurse laden
+          </Button>
+        </div>
+      )}
+
+      {(status === "checking" || status === "loading") && (
+        <div className="space-y-3">
+          <Skeleton className="h-16 w-full" />
+          <Skeleton className="h-16 w-full" />
+          <Skeleton className="h-16 w-full" />
+        </div>
+      )}
+
+      {status === "ready" && (
+        <>
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
+            <span>
+              {courses.length} {courses.length === 1 ? "Kurs" : "Kurse"} geladen
+              {filteredCourses.length !== courses.length &&
+                ` — ${filteredCourses.length} passend zur Filterauswahl`}
+            </span>
+            {failedFiles.length > 0 && (
+              <span className="text-destructive">
+                {failedFiles.length} Datei(en) konnten nicht geladen werden: {failedFiles.join(", ")}
+              </span>
+            )}
+          </div>
+
+          <div className="mb-6">
+            <FilterPanel courses={courses} filters={filters} onChange={setFilters} />
+          </div>
+
+          {filteredCourses.length === 0 ? (
+            <div className="rounded-lg border p-8 text-center text-sm text-muted-foreground">
+              Keine Kurse gefunden. Passe die Filterauswahl an.
+            </div>
+          ) : (
+            <div>
+              {filteredCourses.map((course) => (
+                <CourseCard
+                  key={course.id}
+                  course={course}
+                  onOpenPdf={handleOpenPdf}
+                  pdfAvailable={pdfFolderAvailable}
+                />
+              ))}
+            </div>
+          )}
+        </>
+      )}
     </div>
   )
 }
