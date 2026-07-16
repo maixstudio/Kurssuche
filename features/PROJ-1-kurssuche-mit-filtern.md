@@ -1,6 +1,6 @@
 # PROJ-1: Kurssuche mit Filtern
 
-## Status: Approved
+## Status: Deployed
 **Created:** 2026-07-15
 **Last Updated:** 2026-07-15
 
@@ -313,4 +313,16 @@ Der native Ordner-Auswahldialog (`showDirectoryPicker`) ist ein Betriebssystem-D
 - **Recommendation:** Deploy
 
 ## Deployment
-_To be added by /deploy_
+
+**Status:** ✅ Deployed (als Build-Artefakt bereitgestellt)
+**Deployed:** 2026-07-15
+**Abweichung vom Standard-Workflow:** Kein Vercel — laut PRD-Constraint läuft die App ohne Server als statischer Export direkt aus dem geteilten SharePoint-Ordner (siehe Tech Design). Statt eines automatischen Vercel-Deploys wird der fertige Build im Repo unter `dist/` bereitgestellt; der Nutzer lädt ihn von dort herunter und kopiert ihn selbst in den SharePoint-Ordner.
+**Build-Artefakt:** `dist/` in diesem Repo (Branch `claude/ai-starter-kit-setup-038jt4`), inkl. `dist/README.md` mit Einrichtungsanleitung
+**Git-Tag:** `v1.0.0-PROJ-1`
+
+### Post-Deployment-Hinweis
+Der native Ordner-Auswahldialog (File System Access API) konnte — wie im Tech Design und in den QA-Ergebnissen dokumentiert — nicht automatisiert getestet werden. Nach dem Einrichten im echten SharePoint-Ordner bitte einmal manuell prüfen:
+- [ ] `index.html` öffnet in Edge ohne Fehlermeldung
+- [ ] "Alle Kurse laden" öffnet den Ordner-Dialog und lädt die 48 Kurse korrekt
+- [ ] Nach Neuladen der Seite werden die Kurse automatisch geladen (ohne erneuten Klick)
+- [ ] PDF-Links öffnen die richtigen Original-Dokumente
